@@ -16,27 +16,35 @@
 
 <body>
     <!-- Le Header Le retour vers index -->
-    <div class="direction__icon">
-        <a href="../index.html" class="direction__icon" aria-label="Retour à l'accueil">
-            <i class="fa-solid fa-arrow-left"></i>
-        </a>
-        
-    </div>
     <header class="header">
-        <img src="../Assets/logo/ohmyfood.png" alt="logo de la société Ohmyfood">
+        <div class="direction__icon">
+            <a href="../index.html" aria-label="Retour à l'accueil">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            
+        </div>
+        <div class="logo__container">
+            <img src="../Assets/logo/ohmyfood.png" alt="logo de la société Ohmyfood">
+        </div>
     </header>
 
-    
-
+    <!-- TITRE ET BANNIERE DU RESTAURANT -->
     <main class="menu-container">
         <div class="restaurant-banner">
             <img src="../Assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image du restaurant La palette du goût" class="banner-img">
         </div>
+        
+        <div class="restaurant-header">
+            <h1 class="restaurant-title">La note enchantée</h1>
+            <span class="like__icon" aria-label="Ajouter aux favoris">
+                <i class="fa-regular fa-heart"></i>
+            </span>
+            </div>
 
 
-        <section class="restaurant-menu">
-            <h1 class="restaurant-title">A la francaise</h1>
-            <span><i class="fa-regular fa-heart"></i></span>
+        
+        
+        
         
             <!-- ENTRÉE -->
             <div class="menu__section">
@@ -50,7 +58,7 @@
                         </div>
                         <span class="menu__price">25€</span>
                     </div>
-                    <div class="menu__check hidden">
+                    <div class="menu__check hidden" aria-label="Plats validés">
                         <i class="fa-solid fa-check"></i>
                     </div>
                 </article>
@@ -63,7 +71,7 @@
                         </div>
                         <span class="menu__price">35€</span>
                     </div>
-                    <div class="menu__check hidden">
+                    <div class="menu__check hidden" aria-label="Plats validés">
                         <i class="fa-solid fa-check"></i>
                     </div>
                 </article>
@@ -76,7 +84,7 @@
                         </div>
                         <span class="menu__price">20€</span>
                     </div>
-                    <div class="menu__check hidden">
+                    <div class="menu__check hidden" aria-label="Plats validés">
                         <i class="fa-solid fa-check"></i>
                     </div>
                 </article>
@@ -94,7 +102,7 @@
                         </div>
                         <span class="menu__price">40€</span>
                     </div>
-                    <div class="menu__check hidden">
+                    <div class="menu__check hidden"aria-label="Plats validés">
                         <i class="fa-solid fa-check"></i>
                     </div>
                 </article>
@@ -107,7 +115,7 @@
                         </div>
                         <span class="menu__price">35€</span>
                     </div>
-                    <div class="menu__check hidden">
+                    <div class="menu__check hidden"aria-label="Plats validés">
                         <i class="fa-solid fa-check"></i>
                     </div>
                 </article>
@@ -120,7 +128,7 @@
                         </div>
                         <span class="menu__price">44€</span>
                     </div>
-                    <div class="menu__check hidden">
+                    <div class="menu__check hidden"aria-label="Plats validés">
                         <i class="fa-solid fa-check"></i>
                     </div>
                 </article>
@@ -138,7 +146,7 @@
                         </div>
                         <span class="menu__price">18€</span>
                     </div>
-                    <div class="menu__check hidden">
+                    <div class="menu__check hidden"aria-label="Plats validés">
                         <i class="fa-solid fa-check"></i>
                     </div>
                 </article>
@@ -151,7 +159,7 @@
                         </div>
                         <span class="menu__price">23€</span>
                     </div>
-                    <div class="menu__check hidden">
+                    <div class="menu__check hidden"aria-label="Plats validés">
                         <i class="fa-solid fa-check"></i>
                     </div>
                 </article>
@@ -164,7 +172,7 @@
                         </div>
                         <span class="menu__price">23€</span>
                     </div>
-                    <div class="menu__check hidden">
+                    <div class="menu__check hidden"aria-label="Plats validés">
                         <i class="fa-solid fa-check"></i>
                     </div>
                 </article>
@@ -183,19 +191,18 @@
 
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-section">
-                <img class="logo" src="../Assets/logo/ohmyfood.png" alt="logo de la société Ohmyfood">
+            <div class="footer__logo">
+                <img class="logo" src="assets/logo/ohmyfood.png" alt="logo de la société Ohmyfood">
                 <ul class="footer-links">
                     <li><a href="#">Proposer un restaurant</a></li>
                     <li><a href="#">Devenir partenaire</a></li>
                     <li><a href="#">Mentions légales</a></li>
                     <li><a href="#">Contact</a></li>
-                    <!-- <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li> --> 
-                                                            
                 </ul>
             </div>
         </div>
     </footer>
+    
 
     </body>
 </html>
