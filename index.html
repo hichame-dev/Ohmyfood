@@ -32,7 +32,7 @@
             <section class="intro">
                 <h1 class="main-title">Réservez le menu qui vous convient</h1>
                 <p class="intro__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <a href="#restaurants" class="btn-explore"aria-label="Aller à la section restaurants">
+                <a href="#restaurants" class="btn btn--explore"aria-label="Aller à la section restaurants">
                     Explorer nos restaurants
                 </a>
             </section>
@@ -70,7 +70,7 @@
                 <div class="restaurant__grid">
                     <article class="card">
                         <a href="Restaurants/La-palette-du gout.html">
-                            <img src="Assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant La palette du goût" class="card__img">
+                            <img src="assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant La palette du goût" class="card__img">
                             <div class="card__content">
                                 <h3 class="card__title">La palette du goût</h3>
                                 <p class="card__location">Ménilmontant</p>
@@ -85,10 +85,11 @@
                             <div class="card__content">
                                 <h3 class="card__title">La note enchantée</h3>
                                 <p class="card__location">Charonne</p>
-                                <i class="fa-regular fa-heart card__icon"></i>
+                                <i class="fa-regular fa-heart card__icon card__icon--pink"></i> <!-- Ajout du modificateur -->
                             </div>
                         </a> 
                     </article>
+                    
 
                     <article class="card">
                         <a href="Restaurants/La-note-enchantée.html">
@@ -119,18 +120,19 @@
     
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-container">
+        <div class="footer__container">
             <div class="footer__logo">
-                <img class="logo" src="assets/logo/ohmyfood.png" alt="logo de la société Ohmyfood">
-                <ul class="footer-links">
-                    <li><a href="#">Proposer un restaurant</a></li>
-                    <li><a href="#">Devenir partenaire</a></li>
-                    <li><a href="#">Mentions légales</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+                <img class="footer__logo-img" src="assets/logo/ohmyfood.png" alt="logo de la société Ohmyfood">
             </div>
+            <ul class="footer__links">
+                <li class="footer__link-item"><a href="#" class="footer__link">Proposer un restaurant</a></li>
+                <li class="footer__link-item"><a href="#" class="footer__link">Devenir partenaire</a></li>
+                <li class="footer__link-item"><a href="#" class="footer__link">Mentions légales</a></li>
+                <li class="footer__link-item"><a href="#" class="footer__link">Contact</a></li>
+            </ul>
         </div>
     </footer>
+    
     
 
 </body>
