@@ -1,0 +1,42 @@
+// Couleurs principales (dominantes)
+$primary-color: #000000;  // Noir (texte, titres, éléments principaux)
+$secondary-color: #FFFFFF; // Blanc (fond, boutons)
+
+// Couleurs de fond neutres
+$background-light: #FFFFFF;  // Fond blanc (sections)
+$background-grey: #EAEAEA;   // Fond gris clair
+$background-offwhite: #F3F3F3; // Fond global
+$background-dark: #353535;   // Fond sombre (footer)
+$background-green: #99E2D0; // Fond vert pour états validés
+
+
+
+// Couleurs pour les hovers (accent)
+$hover-primary: #9356DC;  // Violet pour hover
+$hover-secondary: #FF79DA; // Rose pour hover
+
+
+
+// Transparence
+$black-transparent-25: #00000040;  // Noir 25% opacité
+$black-transparent-15: #00000026;  // Noir 15% opacité
+
+// Dégradé pour boutons
+$btn-gradient: linear-gradient(193.33deg, $hover-primary -11.44%, $hover-secondary 123.93%);
+
+//ombre//
+$box-shadow-light: 0px 2px 4px 0px #00000026;  // Légère (éléments basiques)
+$box-shadow-medium: 0px 4px 15px 0px #0000001A;  // Moyenne (cartes, modales)
+$box-shadow-strong: 0px 4.01px 15.04px 0px #00000026; // Forte (éléments majeurs)
+
+// Tailles de police//
+$font-size-xs: 16px;  // Extra small
+$font-size-s: 17px;   // Small
+$font-size-m: 18px;   // Medium
+$font-size-l: 19px;   // Large
+$font-size-xl: 24px;  // Extra large
+
+$font-weight-light: 300;  // Légère
+$font-weight-regular: 400;  // Normale
+$font-weight-medium: 500;  // Moyenne
+$font-weight-bold: 700;  // Gras
