@@ -1,0 +1,46 @@
+// Images
+img {
+    max-width: 100%; // S'assure que l'image ne dépasse pas son conteneur
+    height: auto;    // Maintient les proportions de l'image
+    display: block;  // Supprime l'espace blanc autour des images (comportement inline par défaut)
+  }
+  // _reset.scss
+
+// Supprime les marges et paddings par défaut
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; // Inclut padding et bordure dans les dimensions
+}
+
+// Supprime les styles des listes
+ul,
+ol {
+  list-style: none;
+}
+
+// Supprime la décoration des liens
+a {
+  text-decoration: none;
+  color: inherit; // Hérite de la couleur du texte
+}
+
+// Assure une typographie fluide
+html {
+  font-size: 16px; // 1rem = 16px
+  scroll-behavior: smooth; // Navigation fluide
+}
+
+
+// Images
+body {
+  font-family: $font-family-primary;
+  font-size: 16px; // Taille par défaut adaptée au mobile
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+  color: $primary-color;
+}

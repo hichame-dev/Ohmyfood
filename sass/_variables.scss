@@ -1,0 +1,84 @@
+// ===============================
+// Couleurs
+// ===============================
+
+// Couleurs principales
+$primary-color: #000000;       // Noir pour le texte principal
+$secondary-color: #353535;     // Gris foncé pour certains textes
+$background-color: #FFFFFF;    // Fond blanc principal
+$card-background: #F6F6F6;     // Fond des cartes
+$gradient-color: linear-gradient(90deg, #9356DC, #FF79DA); // Dégradé des boutons
+
+// Couleurs d'accent
+$button-hover-color: #FF79DA;  // Rose pour hover
+$button-shadow: rgba(0, 0, 0, 0.25); // Ombre pour les boutons
+
+// ===============================
+// Typographies
+// ===============================
+
+// Familles de polices
+$font-family-primary: 'Roboto', sans-serif;    // Police principale
+$font-family-secondary: 'Shrikhand', sans-serif; // Police décorative
+
+// Poids des polices
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Tailles des textes
+$font-size-xs: 0.9375rem;      // 15px => 15 / 16
+$font-size-small: 1.0625rem;   // 17px => 17 / 16
+$font-size-medium: 1.125rem;   // 18px => 18 / 16
+$font-size-large: 1.5rem;      // 24px => 24 / 16
+$font-size-xl: 1.75rem;        // 28px => 28 / 16
+
+// Hauteurs de ligne
+$line-height-xs: 1.1rem;       // 17.63px => 17.63 / 16
+$line-height-small: 1.245rem;  // 19.92px => 19.92 / 16
+$line-height-medium: 1.32rem;  // 21.09px => 21.09 / 16
+$line-height-large: 1.758rem;  // 28.13px => 28.13 / 16
+$line-height-xl: 2.551rem;     // 40.82px => 40.82 / 16
+
+// ===============================
+// Espacements
+// ===============================
+
+// Espacements globaux
+$gap-small: 0.3125rem;         // 5px => 5 / 16
+$gap-medium: 1.0625rem;        // 17px => 17 / 16
+$gap-large: 1.5rem;            // 24px => 24 / 16
+
+// Marges et paddings
+$padding-section: 2rem;        // Padding global pour les sections
+$margin-title: 1.5rem;         // Marges pour les titres
+
+// ===============================
+// Dimensions
+// ===============================
+
+$header-height: 3.9375rem;     // 63px => 63 / 16
+$card-width: 18.75rem;         // 300px => 300 / 16
+$button-width: 13.625rem;      // 218px => 218 / 16
+$button-height: 3.125rem;      // 50px => 50 / 16
+
+// ===============================
+// Ombres et transitions
+// ===============================
+
+// Ombres
+$box-shadow-light: 0px 0.25rem 0.9375rem rgba(0, 0, 0, 0.1);   // 4px 15px => convertis en rem
+$box-shadow-strong: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.25);  // 4px 10px => convertis en rem
+
+// Transitions
+$transition-duration: 0.3s;    // Durée des transitions (inchangé)
+$transition-ease: ease;        // Effet naturel pour les transitions
+
+// Dimensions globales image de fond
+$image-width: 375px;
+$image-height: 275px;
+$image-top: 63px;
+$image-gap: 0px;
+$image-opacity: 0;
+

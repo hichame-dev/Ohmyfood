@@ -1,0 +1,15 @@
+//Cette feuille de style contient les styles de base de notre site web. Elle est importée dans le fichier main.scss.//
+//***container*****//
+.container {
+  width: 100%;           // S'adapte à la largeur de l'écran
+  max-width: 375px;      // Correspond à la largeur maximale de la maquette
+  margin: 0 auto;        // Centre horizontalement
+  padding: 0 1rem;       // Ajoute de l'espacement latéral sur mobile
+  box-sizing: border-box;
+}
+
+
+
+
+
+  
