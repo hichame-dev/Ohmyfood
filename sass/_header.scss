@@ -1,0 +1,45 @@
+
+@use '_variables' as *;  // Cela rend toutes les variables disponibles
+// Reset global
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  // Important pour garder un contrôle total sur la taille des éléments
+}
+
+.header {
+  width: 100%;
+  margin-top: 14px;
+  background-color: $background-color;
+  text-align: center;
+  
+  // Section localisation
+  .location {
+    width: 100%;                  // Prend toute la largeur
+    height: 50px;                 // Hauteur fixée à 50px
+    background-color: #f0f0f0;   // Couleur de fond (gris clair)
+    display: flex;                // Utilisation de Flexbox pour l'alignement
+    justify-content: center;      // Centre horizontalement
+    align-items: center;          // Centre verticalement
+    gap: $gap-small;              // Espacement entre l'icône et le texte
+    
+    // Icône de localisation
+    .location__icon {
+      
+      width: 12px;
+      height: 16px;
+      margin-right: 5px;
+      color: $primary-color;
+      font-size: 1rem;
+    }
+
+    // Texte de localisation
+    .location__text {
+      font-family: $font-family-primary;
+      font-size: $font-size-small;
+      font-weight: $font-weight-regular;
+      line-height: $line-height-small;
+      text-align: left;
+    }
+  }
+}
