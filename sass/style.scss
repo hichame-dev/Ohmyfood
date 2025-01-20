@@ -8,3 +8,4 @@
 @use '_forms';
 @use '_animations';
 @use '_responsive';
+@use '_variables' as *;   // Pour importer les variables dans tout le fichier
