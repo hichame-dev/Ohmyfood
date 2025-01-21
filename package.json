@@ -4,7 +4,10 @@
   "description": "Un site de présentation de restaurants gastronomiques avec une interface utilisateur moderne, conçu pour une expérience **mobile first**.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch SASS/style.scss Assets/css/style.css"
+
+
   },
   "keywords": [],
   "author": "",
