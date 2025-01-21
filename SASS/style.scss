@@ -1,0 +1,23 @@
+// Base
+@use './base/reset';
+@use './base/variables';
+@use './base/mixins';
+@use './base/animations';
+
+// Components
+@use './components/buttons';
+@use './components/cards';
+
+// Layout
+@use './layout/header';
+@use './layout/footer';
+@use './layout/grid';
+
+// Pages
+@use './pages/home';
+@use './pages/responsive';
+
+body {
+    margin: 0;
+}
+
