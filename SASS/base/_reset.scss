@@ -7,6 +7,21 @@
     box-sizing: border-box; // Garantit que les bordures/marges sont incluses dans les dimensions
 }
 
+.main-container {
+    width: 100%; // Pleine largeur pour mobile
+    max-width: 375px; // Limite la largeur sur mobile
+    margin: 0 auto; // Centre le conteneur
+    padding: 1rem; // Ajoute un espace interne global
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
 /* Supprime les décorations des liens */
 a {
     text-decoration: none;
@@ -34,7 +49,7 @@ body {
     background-color: #fff;
     color: #000;
     font-size: 16px;
-    line-height: 1.5;
+    
 }
 
 
@@ -47,4 +62,9 @@ button, input, textarea {
     border: none;
     background: none;
     font-family: inherit;
+}
+
+.intro {
+  margin: 0; // Supprime toute marge externe
+  padding: 0; // Supprime tout padding interne
 }
