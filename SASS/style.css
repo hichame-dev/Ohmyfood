@@ -1,0 +1,241 @@
+@charset "UTF-8";
+/* Supprime les marges/paddings par défaut */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .main-container {
+    width: 100%;
+  }
+}
+@media (min-width: 1440px) {
+  .main-container {
+    width: 100%;
+  }
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Supprime les décorations des liens */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Réinitialise les listes */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Corps du texte global */
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  background-color: #FFFFFF;
+  font-size: 1.125rem;
+  line-height: 1.32rem;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button, input {
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.intro {
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  width: 13.625rem;
+  height: 3.125rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.25);
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 13px 1rem;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.btn:hover {
+  background-color: #FF79DA;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.btn--explore {
+  font-size: 1.125rem;
+}
+
+.header {
+  width: 100%;
+  height: 3.9375rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  background-color: #FFFFFF;
+}
+.header .logo {
+  width: auto;
+  height: 30px;
+  max-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+}
+.header__location {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.0625rem;
+  padding: 0 7.406rem;
+  background-color: #EAEAEA;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.header__location .location__icon {
+  font-size: 1rem;
+  color: #000000;
+}
+.header__location .location__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.main-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.intro {
+  width: 100%;
+  background-color: #F6F6F6;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.0625rem;
+}
+
+.intro__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  word-wrap: break-word;
+  gap: 1.0625rem;
+  margin-top: 39px;
+  height: 287px;
+}
+
+.intro__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2.55rem;
+  color: #000000;
+  padding-left: 40px;
+  padding-right: 58px;
+  text-align: center;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.intro__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.32rem;
+  color: #353535;
+  max-width: 100%;
+  text-align: center;
+}
+.intro__text .btn {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  width: 13.625rem;
+  height: 3.125rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.25);
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 13px 1rem;
+  transition: background 0.3s, box-shadow 0.3s;
+  white-space: nowrap;
+}
+.intro__text .btn:hover {
+  background-color: #FF79DA;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.intro__text .btn--explore {
+  font-size: 1.125rem;
+}
+.intro__text .parent-container {
+  width: 100%;
+  max-width: none;
+}
+@media (min-width: 1024px) {
+  .intro__text .intro {
+    height: 239px;
+  }
+}
+@media (min-width: 1440px) {
+  .intro__text .intro {
+    height: 239px;
+  }
+}
+
+body {
+  margin: 0;
+}/*# sourceMappingURL=style.css.map */

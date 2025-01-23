@@ -7,6 +7,33 @@
     box-sizing: border-box; // Garantit que les bordures/marges sont incluses dans les dimensions
 }
 
+.main-container {
+    width: 100%; // Prend toute la largeur de l'écran
+    margin: 0 auto; // Centre le conteneur
+
+}
+
+// Pour les tablettes et plus grands écrans
+@media (min-width: $tablet-width) {
+    .main-container {
+        width: 100%; // Toujours 100% pour tablette
+    }
+}
+
+// Pour les desktops et plus grands écrans
+@media (min-width: $desktop-width) {
+    .main-container {
+        width: 100%; // Toujours 100% pour desktop
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
 /* Supprime les décorations des liens */
 a {
     text-decoration: none;
@@ -34,7 +61,7 @@ body {
     background-color: #fff;
     color: #000;
     font-size: 16px;
-    line-height: 1.5;
+    
 }
 
 
@@ -43,8 +70,15 @@ img {
     height: auto;
 }
 
-button, input, textarea {
+button, input {
     border: none;
     background: none;
     font-family: inherit;
 }
+
+.intro {
+  margin: 0; // Supprime toute marge externe
+  padding: 0; // Supprime tout padding interne
+}
+
+

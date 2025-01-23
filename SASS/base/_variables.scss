@@ -8,7 +8,8 @@ $card-background: #F6F6F6;     // Fond des cartes
 $location-color: #EAEAEA;      // Fond pour la localisation
 
 // Couleurs d'accent
-$gradient-color: linear-gradient(90deg, #9356DC, #FF79DA); // Dégradé des boutons
+// Mise à jour de la variable de dégradé
+$gradient-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 $button-hover-color: #FF79DA;  // Rose pour les hovers
 $button-shadow: rgba(0, 0, 0, 0.25); // Ombre pour les boutons
 
@@ -27,11 +28,17 @@ $font-weight-medium: 500;
 $font-weight-bold: 700;
 
 // Tailles des polices
+$font-size-xxs: 1rem;     // 16px => 16 / 16
 $font-size-xs: 0.9375rem;      // 15px => 15 / 16
+$location-font-size: 1rem; 
 $font-size-small: 1.0625rem;   // 17px => 17 / 16
 $font-size-medium: 1.125rem;   // 18px => 18 / 16
 $font-size-large: 1.5rem;      // 24px => 24 / 16
 $font-size-xl: 1.75rem;        // 28px => 28 / 16
+$logo-max-height: 36px; // Hauteur maximale du logo
+
+
+
 
 // Hauteurs de ligne
 $line-height-xs: 1.1rem;       // 17.6px
@@ -39,6 +46,7 @@ $line-height-small: 1.245rem;  // 19.92px
 $line-height-medium: 1.32rem;  // 21.09px
 $line-height-large: 1.75rem;   // 28px
 $line-height-xl: 2.55rem;      // 40.8px
+$location-padding-x: 1rem; // Padding latéral pour la localisation
 
 // ===============================
 // Espacements
@@ -52,6 +60,14 @@ $gap-large: 1.5rem;      // 24px => 24 / 16
 // Marges et paddings globaux
 $padding-section: 2rem;  // Padding global pour les sections
 $margin-title: 1.5rem;   // Marges pour les titres
+$location-height: 50px;             // Hauteur de la section localisation
+$logo-max-height: 30px;             // Taille maximale du logo
+$location-padding-x: 7.406rem;      // Padding latéral (118.5px)
+$gap-location: 1.0625rem;           // Espacement entre icône et texte (17px)
+$location-line-height: 1.17rem;      // Hauteur de ligne (18.75px)
+$header-total-height: 141px;
+
+
 
 // ===============================
 // Dimensions globales
@@ -72,7 +88,50 @@ $image-height: 17.1875rem;     // 275px => 275 / 16
 // Ombres
 $box-shadow-light: 0px 0.25rem 0.9375rem rgba(0, 0, 0, 0.1);   // Légère
 $box-shadow-strong: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.25);  // Forte
+// Ombre spécifique au header
+$header-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 
 // Transitions
 $transition-duration: 0.3s;  // Durée des transitions
 $transition-ease: ease;      // Effet naturel
+
+//mobile-first tablette desktop//
+$mobile-width: 780px; // Largeur mobile
+$tablet-width: 1024px; // Largeur tablette
+$desktop-width: 1440px; // Largeur desktop
+$container-padding: 1rem; // Padding global
+
+// ===============================
+// Variables spécifiques au Header/Localisation
+// ===============================
+
+// media queries 
+// Largeurs des appareils
+$tablet-width: 1024px; // Largeur pour tablette
+$desktop-width: 1440px; // Largeur pour desktop
+
+
+// Dégradé pour le bouton
+$gradient-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+
+// Couleur de survol
+$button-hover-color: #FF79DA;  // Rose pour le hover
+
+// Ombre pour le bouton
+$button-shadow: rgba(0, 0, 0, 0.25);
+
+// Dimensions du bouton
+$button-width: 13.625rem;      // 218px
+$button-height: 3.125rem;      // 50px
+$button-radius: 25px;          // Rayon des coins
+
+// Couleur du texte du bouton
+$button-text-color: #FFFFFF; // Couleur du texte du bouton
+
+
+
+
+
+
+
+

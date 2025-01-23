@@ -1,2 +1,23 @@
-@use '../base/variables' as *; // Accès direct aux variables
-@use '../base/mixins' as *;    // Accès direct aux mixins
+@use '../base/variables'as *; // Accès direct aux variables
+@use '../base/mixins'as *; // Accès direct aux mixins
+
+
+.main-container {
+    width: 100%; // Pleine largeur pour mobile
+    margin: 0 auto; // Centre le conteneur
+  }
+    
+    
+    
+  
+    // Grille générique
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr; // Une seule colonne en mobile
+    }
+    
+  
+
+  
+  
+  

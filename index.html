@@ -14,7 +14,10 @@
         rel="stylesheet">
 
     <!-- Feuilles de style -->
-    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="stylesheet" href="SASS/style.css">
+
+
+
 
     <!-- Icônes Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -26,12 +29,13 @@
     <!-- HEADER -->
     <header class="header">
         <img class="logo" src="Assets/images/logo/ohmyfood@2x.svg" alt="logo de la société Ohmyfood">
-        <!-- Localisation -->
-        <div class="location">
-            <i class="location__icon fa-solid fa-location-dot" aria-hidden="true"></i>
-            <span class="location__text">Paris, Belleville</span>
-        </div>
     </header>
+    <!-- Localisation -->
+    <div class="header__location">
+        <i class="location__icon fa-solid fa-location-dot" aria-hidden="true"></i>
+        <span class="location__text">Paris, Belleville</span>
+    </div>
+
 
     <!-- MAIN -->
     <main>
@@ -39,13 +43,18 @@
 
             <!-- Introduction -->
             <section class="intro">
-                <h1 class="main-title">Réservez le menu qui vous convient</h1>
-                <p class="intro__text">
-                    Découvrez des restaurants d'exception, sélectionnés par nos soins.
-                </p>
+                <div class="intro__content">
+                    <h1 class="intro__title">Réservez le menu qui  vous convient</h1>
+                    <p class="intro__text">
+                        Découvrez des restaurants d'exception, sélectionnés par nos soins.
+                    </p>
+                
+
                 <a href="#restaurants" class="btn btn--explore" aria-label="Aller à la section restaurants">
                     Explorer nos restaurants
                 </a>
+
+                </div>
             </section>
 
             <!-- Fonctionnement -->
@@ -168,7 +177,8 @@
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__logo">
-                <img class="footer__logo-img" src="Assets/images/logo/ohmyfood@2x.svg" alt="logo de la société Ohmyfood">
+                <img class="footer__logo-img" src="Assets/images/logo/ohmyfood@2x.svg"
+                    alt="logo de la société Ohmyfood">
             </div>
             <ul class="footer__links">
                 <li class="footer__link-item">
