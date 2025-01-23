@@ -1,67 +1,12 @@
-@use './variables'as *; // Importation des variables globales
+@use '../abstracts/variables'as *;
 
-/* Supprime les marges/paddings par défaut */
+
+// _reset.scss
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; // Garantit que les bordures/marges sont incluses dans les dimensions
-}
-
-.main-container {
-    width: 100%; // Prend toute la largeur de l'écran
-    margin: 0 auto; // Centre le conteneur
-
-}
-
-// Pour les tablettes et plus grands écrans
-@media (min-width: $tablet-width) {
-    .main-container {
-        width: 100%; // Toujours 100% pour tablette
-    }
-}
-
-// Pour les desktops et plus grands écrans
-@media (min-width: $desktop-width) {
-    .main-container {
-        width: 100%; // Toujours 100% pour desktop
-    }
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
-
-
-/* Supprime les décorations des liens */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Réinitialise les listes */
-ul,
-ol {
-    list-style: none;
-}
-
-/* Corps du texte global */
-body {
-    font-family: $font-family-primary; // Police par défaut
-    color: $primary-color; // Couleur principale du texte
-    background-color: $background-color; // Fond global
-    font-size: $font-size-medium; // Taille de texte par défaut
-    line-height: $line-height-medium; // Hauteur de ligne par défaut
-}
-
-
-body {
-    font-family: sans-serif;
-    background-color: #fff;
-    color: #000;
-    font-size: 16px;
-    
+    box-sizing: border-box;
 }
 
 
@@ -70,15 +15,9 @@ img {
     height: auto;
 }
 
-button, input {
+button,
+input {
     border: none;
     background: none;
     font-family: inherit;
 }
-
-.intro {
-  margin: 0; // Supprime toute marge externe
-  padding: 0; // Supprime tout padding interne
-}
-
-

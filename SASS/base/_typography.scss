@@ -1,0 +1,25 @@
+@use '../abstracts/variables'as *;
+@use '../abstracts/mixins'as *;
+
+
+
+h2 {
+    font-family: $font-family-primary;
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    color: $primary-color;    
+}
+
+p {
+    font-family: $font-family-primary;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
