@@ -1,8 +1,12 @@
 // Base
-@use './base/reset';
-@use './base/variables';
-@use './base/mixins';
-@use './base/animations';
+@use './abstracts/variables'as *;
+@use './abstracts/mixins'as *;
+@use './abstracts/animations';
+@use './abstracts/breakpoints';
+
+@use './base/reset'as *;
+@use './base/base';
+@use './base/typography';
 
 // Components
 @use './components/buttons';
@@ -12,11 +16,10 @@
 @use './layout/header';
 @use './layout/footer';
 @use './layout/grid';
+@use './Layout/steps';
 
 // Pages
 @use './pages/home';
-@use './pages/responsive';
-
 body {
     margin: 0;
 }

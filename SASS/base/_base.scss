@@ -1,0 +1,42 @@
+@use '../abstracts/variables'as *;
+
+body {
+    font-family: $font-family-primary; // Police par défaut
+    color: $primary-color; // Couleur principale du texte
+    background-color: $background-color; // Fond global
+    font-size: $font-size-medium; // Taille de texte par défaut
+    line-height: 1.32rem; // Hauteur de ligne par défaut
+}
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%; // Prend toute la largeur de l'écran
+    margin: 0 auto; // Centre le conteneur
+    
+}
+
+.intro {
+    margin: 0; // Supprime toute marge externe
+    padding: 0; // Supprime tout padding interne
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+// Pour les tablettes et plus grands écrans
+@media (min-width: $tablet-width) {
+    .main-container {
+        width: 100%; // Toujours 100% pour tablette
+    }
+}
+
+// Pour les desktops et plus grands écrans
+@media (min-width: $desktop-width) {
+    .main-container {
+        width: 100%; // Toujours 100% pour desktop
+    }
+}

@@ -1,2 +1,2 @@
-@use '../base/variables' as *; // Accès direct aux variables
-@use '../base/mixins' as *;    // Accès direct aux mixins
+@use '../abstracts/variables'as *;
+@use '../abstracts/mixins'as *;
