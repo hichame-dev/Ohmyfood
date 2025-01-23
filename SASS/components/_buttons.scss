@@ -1,2 +1,21 @@
 @use '../base/variables' as *;
 @use '../base/mixins' as *;
+
+
+// Bouton générique
+
+
+// Mixin pour le style du bouton
+.btn {
+  @include button-style($gradient-color, $button-width, $button-height, $button-radius, $button-shadow, $button-text-color, $font-family-primary, $font-size-medium); // Appliquer le mixin avec les variables
+
+  &:hover {
+    background-color: $button-hover-color; // Changer la couleur au survol
+    box-shadow: 0px 4px 10px 0px $button-shadow; // Ajouter une ombre au survol
+  }
+
+  &--explore {
+    font-size: $font-size-medium; // Taille du texte pour la classe "explore"
+  }
+}
+

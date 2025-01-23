@@ -4,43 +4,20 @@
 
 .main-container {
     width: 100%; // Pleine largeur pour mobile
-    max-width: $mobile-width; // Limite la largeur sur mobile
     margin: 0 auto; // Centre le conteneur
+  }
+    
+    
     
   
     // Grille générique
     .grid {
       display: grid;
       grid-template-columns: 1fr; // Une seule colonne en mobile
-      gap: 1rem; // Espacement entre les éléments
     }
-  
-    @media (min-width: 1024px) { // Tablette
-      max-width: 1024px; // Largeur maximale pour tablette
-      padding: 2rem; // Espacement augmenté
-    }
-  
-    @media (min-width: 1440px) { // Desktop
-      max-width: 1200px; // Largeur maximale pour desktop
-      padding: 3rem; // Espacement encore plus grand
-    }
-  }
-  
-  // Grille pour les restaurants
-  .restaurant-grid {
-    display: grid;
-    grid-template-columns: 1fr; // Mobile : une seule colonne
-    gap: 1rem; // Espacement entre les cartes
-  
-    @media (min-width: 1024px) { // Tablette
-      grid-template-columns: repeat(2, 1fr); // Deux colonnes
-    }
-  
-    @media (min-width: 1440px) { // Desktop
-      grid-template-columns: repeat(2, 1fr); // Toujours deux colonnes
-      grid-auto-rows: auto; // Hauteur des cartes ajustée automatiquement
-    }
-  }
-  
+    
   
 
+  
+  
+  
