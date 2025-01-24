@@ -1,32 +1,48 @@
 @use './variables'as *; // Importer les variables pour les utiliser dans les mixins
 
-// _mixins.scss
-
-
-// _mixins.scss
-
-// _mixins.scss
+// _mixins.scss boutton//
 
 @mixin button-style($bg-color, $width, $height, $radius, $shadow, $text-color, $font-family, $font-size) {
-  background: $bg-color;              // Couleur de fond du bouton
-  width: $width;                      // Largeur du bouton
-  height: $height;                    // Hauteur du bouton
-  border-radius: $radius;             // Rayon des coins arrondis
-  box-shadow: $shadow;                // Ombre du bouton
+  background: $bg-color; // Couleur de fond du bouton
+ 
+  border-radius: $radius; // Rayon des coins arrondis
+  box-shadow: $shadow; // Ombre du bouton
   text-align: center; // Centrer le texte horizontalement
   display: inline-flex; // Utilisation de flexbox pour centrer le texte
   justify-content: center; // Centrer horizontalement
   align-items: center; // Centrer verticalement
   white-space: nowrap;
-  color: $text-color;                 // Couleur du texte
-  font-family: $font-family;          // Police du bouton
-  font-size: $font-size;              // Taille du texte du bouton
-  line-height: 1.5;                   // Hauteur de ligne
-  text-decoration: none;              // Enlever les décorations de texte
-  cursor: pointer;                   // Curseur pointer pour le bouton
-  padding: 13px 1rem;// Padding horizontal
-  transition: background 0.3s, box-shadow 0.3s;  // Transition pour les effets
+  color: $text-color; // Couleur du texte
+  font-family: $font-family; // Police du bouton
+  font-size: $font-size; // Taille du texte du bouton
+  line-height: 1.5; // Hauteur de ligne
+  text-decoration: none; // Enlever les décorations de texte
+  cursor: pointer; // Curseur pointer pour le bouton
+  padding: 13px 1rem; // Padding horizontal
+  transition: background 0.3s, box-shadow 0.3s; // Transition pour les effets
 }
+
+
+
+
+// Mixin simple pour les étapes
+@mixin step-style($width, $height, $background, $border-radius, $shadow) {
+  width: 100%;
+  height: $height;
+  background-color: $card-background;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  // position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
 
 
 
