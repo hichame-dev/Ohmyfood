@@ -4,9 +4,12 @@
 .steps {
     width: 100%;
     margin-top: 3rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding: 0 1.25rem; // On met un padding horizontal a la place du left et du right
     background-color: $background-color;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
 
     &__title {
         margin-bottom: 1.625rem;
@@ -16,7 +19,7 @@
         display: grid;
         width: 100%;
         gap: 20px;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(323px, 330px));
     }
 
     .step {
@@ -25,10 +28,10 @@
             $step-box-background,
             $step-box-border-radius,
             $step-box-shadow);
-
         position: relative;
-        display: flex;
-        align-items: center;
+        display: flex; // Ajout display flex pour alignement des elements
+        align-items: center; // On ajoute l'alignement des elements
+    
 
         .step__number {
             position: absolute;
@@ -56,7 +59,7 @@
         .step__text {
             margin-left: $step-number-offset;
             flex: 1;
-            // padding: 0;
+            justify-self: center;
         }
     }
 }
@@ -68,10 +71,17 @@
 // Media query pour 1024px et 1440px
 @media (min-width: 1024px) and (max-width: 1440px) {
     .steps {
-        margin-top: 50px; // Marge supérieure à 50px
+        margin-top: 50px;
+        /* Marge supérieure à 50px */
+        width: 75%;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
 
         &__list {
-            gap: 20px; // Gap à 20px
+            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(323px, 330px));
+
         }
     }
 }
