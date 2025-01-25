@@ -1,67 +1,123 @@
 @use '../abstracts/variables'as *;
 @use '../abstracts/mixins'as *;
-@use'../components/buttons' as *; 
-@use'../base/typography' as *;
-
+@use '../components/buttons'as *;
+@use '../base/typography'as *;
 
 
 .intro {
-  width: 100%; // Prend toute la largeur de l'écran
-  background-color: $card-background; // Couleur de fond
-  background-size: cover; // Le fond couvre toute la section
-  display: flex; // Utilisation de flexbox
-  flex-direction: column; // Aligne les éléments verticalement
-  align-items: center; // Centre horizontalement
-  justify-content: center; // Centre verticalement
-  text-align: center; // Centre le texte
-  gap: $gap-medium; // Espacement entre les éléments
+  width: 100%;
+  background-color: $card-background;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: $gap-medium;
+  padding-bottom: 20px;
+  min-height: 179px;
 }
 
 .intro__content {
-  display: flex; // Utilisation de flexbox
-  flex-direction: column; // Aligne les éléments verticalement
-  align-items: center; // Centre horizontalement
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   word-wrap: break-word;
-  gap: $gap-medium; // Espacement entre les éléments
-  margin-top: 39px; // Espacement de 39px sous le header
-  height: 287px; // Hauteur fixe de la section sur mobile
+  gap: $gap-medium;
+  //  margin-top: 39px;  On retire le margin de la media query
 }
 
 .intro__title {
-  font-family: $font-family-primary; // Roboto
-  font-size: $font-size-xl; // Taille du titre
-  font-weight: $font-weight-bold; // Poids du titre
-  line-height: $line-height-xl; // Hauteur de ligne
-  color: $primary-color; // Couleur du titre
+  font-family: $font-family-primary;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-xl;
+  color: $primary-color;
   padding-left: 40px;
   padding-right: 58px;
-  text-align: center; // Centrer le texte
-  width: 100%; // Prend toute la largeur de l'écran
-  word-wrap: break-word; // Permet au texte de passer à la ligne si nécessaire
-
+  margin-top: 30px;
+  text-align: center;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .intro__text {
-  font-family: $font-family-primary; // Roboto
-  font-size: $font-size-medium; // Taille du texte (variable)
-  font-weight: $font-weight-light; // Poids léger du texte
-  line-height: 1.32rem; // Hauteur de ligne pour le texte
-  color: $secondary-color; // Couleur du texte
-  max-width: 100%; // Limite la largeur du texte à 90% du parent
-  text-align: center; // Centre le texte horizontalement
+  font-family: $font-family-primary;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-light;
+  line-height: 1.32rem;
+  color: $secondary-color;
+  max-width: 100%;
+  text-align: center;
+}
 
-
-@media (min-width: 1024px) {
+// Media queries pour tablettes et plus grands écrans
+@media (min-width: $tablet-width) {
   .intro {
-    height: 239px; // Hauteur pour tablette
+    padding: 0;
+    margin: 0;
+    gap: $gap-small;
+    min-height: 239px;
+  }
+
+  .intro__content {
+    gap: 18px;
+    /* Utilise le gap pour l'espacement */
+  }
+
+  .intro__title {
+    font-size: 40px;
+  }
+
+  .intro__text {
+    font-size: 18px;
   }
 }
 
-// Pour les desktops (1440px)
-@media (min-width: 1440px) {
-  .intro {
-    height: 239px; // Hauteur pour desktop
+// Media query pour 1024px et 1440px
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .intro .intro__content {
+    margin: 0;
+    padding: 0;
+    gap: 18px;
+    /* Utilise le gap pour l'espacement */
+    /* On retire le margin */
   }
-}
 
-}
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 239px;
+    /* La section a 179px minimum */
+    gap: 18px;
+    
+  }
+
+  .intro__title {
+    margin-top: 30px;
+  }
+
+  .intro__title {
+    margin-bottom: 18px;
+  }
+
+  .intro__text {
+    margin-bottom: 18px;
+  }
+
+  .intro__content .btn {
+    margin-top: auto;
+    display: block;
+    /* On passe sur display block pour descendre le bouton */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    /*On supprime le margin bottom par defaut */
+  }
+  }
+
+
+
+  

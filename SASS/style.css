@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -31,24 +32,35 @@ body {
   margin: 0 auto;
 }
 
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .intro {
   margin: 0;
   padding: 0;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
 @media (min-width: 1024px) {
+  main {
+    max-width: 1440px;
+    padding: 0;
+  }
   .main-container {
     width: 100%;
   }
 }
 @media (min-width: 1440px) {
-  .main-container {
-    width: 100%;
+  main {
+    max-width: 1440px;
+    padding: 0;
   }
 }
 h2 {
@@ -108,7 +120,59 @@ ol {
 
 .parent-container {
   width: 100%;
-  max-width: none;
+}
+
+.restaurants {
+  width: 100%;
+  padding: 0 1.25rem;
+  margin-top: 3rem;
+  background-color: #f7f7f7;
+  padding-top: 54px;
+}
+.restaurants__title {
+  margin-bottom: 1.625rem;
+  padding-left: 10px;
+}
+.restaurants__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+  padding-bottom: 30px;
+}
+.restaurants .card--new {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+.restaurants .card--new:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+.restaurants .card--new__tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #99E2D0;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 2px;
+  font-size: 0.875rem;
+}
+.restaurants .card:not(.card--new) {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.restaurants .card:not(.card--new):hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+.restaurants .card__img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .header {
@@ -165,9 +229,12 @@ ol {
 .steps {
   width: 100%;
   margin-top: 3rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding: 0 1.25rem;
   background-color: #FFFFFF;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
 }
 .steps__title {
   margin-bottom: 1.625rem;
@@ -176,23 +243,28 @@ ol {
   display: grid;
   width: 100%;
   gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(323px, 330px));
 }
 .steps .step {
   width: 100%;
-  height: 4.52375rem;
+  min-height: 4.52375rem;
   background-color: #F6F6F6;
   border-radius: 1.25rem;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px 20px;
+  /* padding haut, bas 20px et gauche droite */
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .steps .step .step__number {
   position: absolute;
   left: -10px;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background-color: #9356DC;
   color: #fff;
@@ -201,23 +273,37 @@ ol {
   justify-content: center;
   font-size: 1rem;
   font-weight: bold;
+  margin-right: 24px;
 }
 .steps .step .step__icon {
-  position: absolute;
-  left: 4.12375rem;
   width: 0.81375rem;
   height: 1.24375rem;
-  margin-right: 38px;
   color: #7E7E7E;
 }
-.steps .step .step__icon .step__text {
-  margin-left: 1.6875rem;
+.steps .step .step__text {
+  margin-left: 1.25rem;
+  flex: 1;
+  justify-self: center;
 }
 
 .step__icon__store {
   color: #9356DC;
 }
 
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .steps {
+    margin-top: 50px;
+    /* Marge supérieure à 50px */
+    width: 75%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .steps__list {
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(323px, 330px));
+  }
+}
 .intro {
   width: 100%;
   background-color: #F6F6F6;
@@ -228,6 +314,8 @@ ol {
   justify-content: center;
   text-align: center;
   gap: 1.0625rem;
+  padding-bottom: 20px;
+  min-height: 179px;
 }
 
 .intro__content {
@@ -236,8 +324,6 @@ ol {
   align-items: center;
   word-wrap: break-word;
   gap: 1.0625rem;
-  margin-top: 39px;
-  height: 287px;
 }
 
 .intro__title {
@@ -248,6 +334,7 @@ ol {
   color: #000000;
   padding-left: 40px;
   padding-right: 58px;
+  margin-top: 30px;
   text-align: center;
   width: 100%;
   word-wrap: break-word;
@@ -262,17 +349,61 @@ ol {
   max-width: 100%;
   text-align: center;
 }
-@media (min-width: 1024px) {
-  .intro__text .intro {
-    height: 239px;
-  }
-}
-@media (min-width: 1440px) {
-  .intro__text .intro {
-    height: 239px;
-  }
-}
 
+@media (min-width: 1024px) {
+  .intro {
+    padding: 0;
+    margin: 0;
+    gap: 0.3125rem;
+    min-height: 239px;
+  }
+  .intro__content {
+    gap: 18px;
+    /* Utilise le gap pour l'espacement */
+  }
+  .intro__title {
+    font-size: 40px;
+  }
+  .intro__text {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .intro .intro__content {
+    margin: 0;
+    padding: 0;
+    gap: 18px;
+    /* Utilise le gap pour l'espacement */
+    /* On retire le margin */
+  }
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 239px;
+    /* La section a 179px minimum */
+    gap: 18px;
+  }
+  .intro__title {
+    margin-top: 30px;
+  }
+  .intro__title {
+    margin-bottom: 18px;
+  }
+  .intro__text {
+    margin-bottom: 18px;
+  }
+  .intro__content .btn {
+    margin-top: auto;
+    display: block;
+    /* On passe sur display block pour descendre le bouton */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    /*On supprime le margin bottom par defaut */
+  }
+}
 body {
   margin: 0;
 }/*# sourceMappingURL=style.css.map */

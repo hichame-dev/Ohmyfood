@@ -4,7 +4,7 @@
 
 @mixin button-style($bg-color, $width, $height, $radius, $shadow, $text-color, $font-family, $font-size) {
   background: $bg-color; // Couleur de fond du bouton
- 
+
   border-radius: $radius; // Rayon des coins arrondis
   box-shadow: $shadow; // Ombre du bouton
   text-align: center; // Centrer le texte horizontalement
@@ -26,23 +26,54 @@
 
 
 // Mixin simple pour les étapes
-@mixin step-style($width, $height, $background, $border-radius, $shadow) {
+@mixin step-style($step-box-width, $step-box-height, $step-box-background, $step-box-border-radius,
+  $step-box-shadow) {
   width: 100%;
-  height: $height;
-  background-color: $card-background;
-  border-radius: $border-radius;
-  box-shadow: $shadow;
-  // position: relative;
+  min-height: $step-box-height;
+  background-color: $step-box-background;
+  border-radius: $step-box-border-radius;
+  box-shadow: $step-box-shadow;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px 20px;
+  /* padding haut, bas 20px et gauche droite */
 }
 
 
 
+// Mixin pour les cartes avec tag "Nouveau"
+@mixin card-with-tag {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
 
+  &:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  }
 
+  &__tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #99E2D0;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 2px;
+    font-size: 0.875rem;
+  }
+}
 
+// Mixin pour les cartes sans tag "Nouveau"
+@mixin card-without-tag {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 
-
-
+  &:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  }
+}

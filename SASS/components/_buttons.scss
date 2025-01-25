@@ -7,7 +7,14 @@
 
 // Mixin pour le style du bouton
 .btn {
-  @include button-style($gradient-color, $button-width, $button-height, $button-radius, $button-shadow, $button-text-color, $font-family-primary, $font-size-medium); // Appliquer le mixin avec les variables
+  @include button-style($gradient-color,
+    $button-width,
+    $button-height,
+    $button-radius,
+    $button-shadow,
+    $button-text-color,
+    $font-family-primary,
+    $font-size-medium); // Appliquer le mixin avec les variables
 
   &:hover {
     background-color: $button-hover-color; // Changer la couleur au survol
@@ -30,7 +37,13 @@
     font-size: $font-size-medium;
   }
 }
+
 .parent-container {
   width: 100%;
-  max-width: none; // Assure-toi qu'il n'y a pas de max-width limitant la largeur
+
 }
+
+@media (min-width: $tablet-width) {
+
+}
+
