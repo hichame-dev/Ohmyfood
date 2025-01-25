@@ -92,7 +92,7 @@
     min-height: 239px;
     /* La section a 179px minimum */
     gap: 18px;
-    
+
   }
 
   .intro__title {
@@ -116,8 +116,124 @@
     margin-bottom: 0;
     /*On supprime le margin bottom par defaut */
   }
+}
+
+
+
+//restaurants//
+.restaurants {
+  width: 100%;
+  padding: 0 18px;
+  padding-left: 17px;
+  margin-top: 3rem;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  
+  gap: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+
+
+  &__title h2 {
+    margin-bottom: 1.625rem;
+    padding-left: 17px;
+    /* Modification ici pour mettre 17px à gauche */
+    // align-self: flex-start;  // On retire cette propriété
+    width: 100%;
+    margin-top: 54px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.4rem;
+    }
   }
 
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 375px;
 
+  }
 
-  
+  .card {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 18px;
+
+    &:hover {
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    &__image-container {
+      position: relative;
+      object-fit: cover;
+    }
+
+    &__img {
+      position: relative;
+      //left: -3px;
+      //top: -57px; On retire ces propriété
+      object-fit: cover; // Remise du object-fit cover
+      box-shadow: 0px 4px 15px 0px #0000001A;
+    }
+
+    &__content {
+      padding-left: 16px;
+      padding-right: 16px;
+      height: 77px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: flex-start;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+    }
+
+    &__title {
+      @extend .card__title;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    &__location {
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    &__icon-pink {
+      width: 22px;
+      height: 21px;
+      justify-self: end;
+      align-self: start;
+
+      &:hover .card__icon {
+        color: #ff79da;
+      }
+    }
+
+    &--new .card__tag {
+      position: absolute;
+      top: 13px;
+      right: 16px;
+      background-color: #99E2D0;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 2px;
+      font-size: 0.875rem;
+    }
+
+    
+  }
+}

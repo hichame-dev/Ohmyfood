@@ -4,7 +4,6 @@
 
 @mixin button-style($bg-color, $width, $height, $radius, $shadow, $text-color, $font-family, $font-size) {
   background: $bg-color; // Couleur de fond du bouton
-
   border-radius: $radius; // Rayon des coins arrondis
   box-shadow: $shadow; // Ombre du bouton
   text-align: center; // Centrer le texte horizontalement
@@ -50,11 +49,12 @@
   overflow: hidden;
   position: relative;
 
+
   &:hover {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   }
 
-  &__tag {
+  .card__tag {
     position: absolute;
     top: 15px;
     right: 15px;
