@@ -17,26 +17,42 @@ body {
     
 }
 
-.intro {
-    margin: 0; // Supprime toute marge externe
-    padding: 0; // Supprime tout padding interne
+// Styles de base pour le conteneur principal (main)
+main {
+    width: 100%;
+    margin: 0 auto;
 }
 
-html, body {
+
+// Reset pour html et body (pour une base propre)
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+// Styles de base pour les sections intro et autres
+.intro {
     margin: 0;
     padding: 0;
 }
 
 // Pour les tablettes et plus grands écrans
 @media (min-width: $tablet-width) {
+    main {
+        max-width: 1440px; // limite la largeur du conteneur
+        padding: 0; // retire le padding horizontal
+    }
+
     .main-container {
         width: 100%; // Toujours 100% pour tablette
     }
 }
 
-// Pour les desktops et plus grands écrans
-@media (min-width: $desktop-width) {
-    .main-container {
-        width: 100%; // Toujours 100% pour desktop
+// Pour les ordinateurs de bureau et plus grands écrans (ajouté pour une complétude)
+@media (min-width: 1440px) {
+    main {
+        max-width: 1440px; // limite la largeur du conteneur
+        padding: 0;
     }
 }
