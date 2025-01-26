@@ -23,6 +23,13 @@
 
 // Pages
 @use './pages/home';
+@use './restaurants/mixins_personnalises'as *;
+@use './restaurants/a_la_francaise';
+@use './restaurants/la_note_enchante';
+@use './restaurants/la_palette_du_gout' ;
+@use './restaurants/le_delice_des_sens' ;
+
+
 body {
     margin: 0;
 }
