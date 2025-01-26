@@ -1,0 +1,58 @@
+@use '../abstracts/variables'as *;
+@use '../abstracts/mixins'as *;
+@use '../abstracts/animations'as *;
+@use '../abstracts/breakpoints';
+
+@use '../base/reset'as *;
+@use '../base/base';
+@use '../base/typography';
+
+@use '../components/buttons';
+
+
+@use '../layout/header';
+@use '../layout/footer';
+@use '../layout/grid';
+@use '../layout/steps';
+
+
+@mixin centered-flex() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-style($color, $padding) {
+    background-color: $color;
+    color: white;
+    padding: $padding;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@mixin font-style($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
+// Mixin pour le header avec icône
+@mixin header-style-icon() {
+    width: 100%;
+    height: $header-height;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    background-color: $background-color;
+
+    .logo {
+        width: auto;
+        height: 30px;
+        max-height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 14px;
+    }
+}

@@ -8,13 +8,15 @@
 // Mixin pour le style du bouton
 .btn {
   @include button-style($gradient-color,
-    $button-width,
-    $button-height,
+    218px,
+    /* largeur du bouton */
+    50px,
+    /* hauteur du bouton */
     $button-radius,
     $button-shadow,
     $button-text-color,
     $font-family-primary,
-    $font-size-medium); // Appliquer le mixin avec les variables
+    $font-size-medium);
 
   &:hover {
     background-color: $button-hover-color; // Changer la couleur au survol

@@ -1,2 +1,64 @@
 @use '../abstracts/variables'as *;
 @use '../abstracts/mixins'as *;
+@use '../base/typography'as *;
+
+.footer {
+    @include footer-layout;
+    background-color: $secondary-color;
+
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: flex-start;
+        padding-bottom: 1.25rem;
+        
+    }
+
+    &__logo-text {
+        color: $background-color;
+        @include logo-text;
+        display: flex;
+
+        a {
+            display: flex;
+            align-items: center;
+            line-height: $line-height-large;
+        }
+    }
+
+
+    &__link-item {
+
+        span {
+            margin-right: 0.3125rem;
+            display: flex;
+            color: $background-color;
+        }
+    }
+
+    &__link-item-icon {
+        color: $background-color;
+    }
+
+
+    &__link {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.171875rem;
+        text-align: left;
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        line-height: 1.171875rem;
+
+
+
+        &:hover {
+            text-decoration: underline;
+            color: lighten($background-color, 10%);
+        }
+    }
+}

@@ -7,8 +7,21 @@ h2 {
     font-family: $font-family-primary;
     font-size: $font-size-large;
     font-weight: $font-weight-bold;
-    color: $primary-color;    
+    color: $primary-color; 
+    margin-top: 54px;
 }
+
+
+
+.card__title {
+    width: 267px;
+    height: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+
+    /*  Autres styles */
+}
+
 
 p {
     font-family: $font-family-primary;
@@ -23,3 +36,4 @@ ul,
 ol {
     list-style: none;
 }
+

@@ -10,13 +10,16 @@
 
 // Components
 @use './components/buttons';
-@use './components/cards';
+@use './components/card';
 
 // Layout
 @use './layout/header';
 @use './layout/footer';
 @use './layout/grid';
 @use './Layout/steps';
+
+// RESTAURANTS//
+
 
 // Pages
 @use './pages/home';

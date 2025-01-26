@@ -3,7 +3,7 @@
 // ===============================
 $primary-color: #000000;       // Noir pour le texte principal
 $secondary-color: #353535;     // Gris foncé pour les éléments secondaires
-$background-color: #FFFFFF;    // Fond blanc principal
+$background-color: #FFFFFF;   // Fond blanc principal
 $card-background: #F6F6F6;     // Fond des cartes
 $location-color: #EAEAEA;      // Fond pour la localisation
 $icone-color: #7E7E7E;
@@ -137,16 +137,16 @@ $button-text-color: #FFFFFF; // Couleur du texte du bouton
 $base-font-size: 16px; // La base pour la conversion, généralement 16px
 
 // Conversion de px à rem en utilisant la formule : px / base-font-size
-$step-box-width: 322.49px / $base-font-size * 1rem; // En rem
-$step-box-height: 72.38px / $base-font-size * 1rem; // En rem
-$step-box-border-radius: 20px / $base-font-size * 1rem; // Conversion du border-radius si besoin
-$step-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15); // L'ombre ne nécessite pas de conversion en rem
+$step-box-width: 20.155625rem; // 322.49 / 16 = 20.155625
+$step-box-height: 4.52375rem; // 72.38 / 16 = 4.52375
+$step-box-border-radius: 1.25rem; // 20 / 16 = 1.25
+$step-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 $step-box-background: $card-background;
-$step-icon-width: 13.02px / $base-font-size * 1rem; // En rem
-$step-icon-height: 19.9px / $base-font-size * 1rem; // En rem
-$step-icon-left-offset: 65.98px / $base-font-size * 1rem; // En rem
-$step-number-offset: 20px / $base-font-size * 1rem; // En rem
-$step-text-offset: 27px / $base-font-size * 1rem; // En rem
+$step-icon-width: 0.81375rem; // 13.02 / 16 = 0.81375
+$step-icon-height: 1.24375rem; // 19.9 / 16 = 1.24375
+$step-icon-left-offset: 4.12375rem; // 65.98 / 16 = 4.12375
+$step-number-offset: 1.25rem; // 20 / 16 = 1.25
+$step-text-offset: 1.6875rem;
 
 
 

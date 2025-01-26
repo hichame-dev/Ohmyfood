@@ -6,7 +6,6 @@
     margin-top: 3rem;
     padding: 0 1.25rem; // On met un padding horizontal a la place du left et du right
     background-color: $background-color;
-    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -28,14 +27,15 @@
             $step-box-background,
             $step-box-border-radius,
             $step-box-shadow);
-        position: relative;
+        // position: relative;
         display: flex; // Ajout display flex pour alignement des elements
-        align-items: center; // On ajoute l'alignement des elements
-    
+        flex-wrap: nowrap;  /* On empêche le passage à la ligne */
+        // align-items: center; // On ajoute l'alignement des elements
+
 
         .step__number {
             position: absolute;
-            left: -10px;
+            left: 10px;
             width: 24px;
             height: 24px;
             border-radius: 50%;
@@ -56,32 +56,19 @@
             // margin-right: 38px;
         }
 
+        
+
         .step__text {
             margin-left: $step-number-offset;
-            flex: 1;
             justify-self: center;
         }
     }
+
+    
 }
 
 .step__icon__store {
     color: $step-color;
 }
 
-// Media query pour 1024px et 1440px
-@media (min-width: 1024px) and (max-width: 1440px) {
-    .steps {
-        margin-top: 50px;
-        /* Marge supérieure à 50px */
-        width: 75%;
-        padding: 0;
-        margin-left: auto;
-        margin-right: auto;
 
-        &__list {
-            gap: 24px;
-            grid-template-columns: repeat(auto-fit, minmax(323px, 330px));
-
-        }
-    }
-}

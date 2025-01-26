@@ -1,0 +1,29 @@
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 54px;
+}
+
+.card__title {
+  width: 267px;
+  height: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  /*  Autres styles */
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
