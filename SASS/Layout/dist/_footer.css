@@ -31,73 +31,87 @@ ol {
 .footer {
   width: 100%;
   min-height: 186px;
-  background-color: #353535;
-  padding: 22px 25px;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   position: relative;
+  gap: 1rem;
+  padding: 1.375rem 1.5625rem;
+  background-color: #353535;
 }
-
 .footer__container {
   max-width: 375px;
 }
-
 .footer__logo {
   width: 100%;
   display: flex;
-  justify-content: center;
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
-.footer__logo a {
-  display: flex;
-}
-
-.footer__logo-img {
-  max-width: 120px;
-}
-
 .footer__nav {
   width: 100%;
   display: flex;
   justify-content: flex-start;
 }
-
 .footer__links {
   list-style: none;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 0.4375rem;
 }
-
 .footer__link-item {
   display: flex;
   align-items: center;
 }
-
+.footer__link-item-icon {
+  width: 0.745rem;
+  height: 0.8125rem;
+}
+.footer__link-item-icon i {
+  font-size: 0.8125rem;
+}
+.footer__logo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  padding-bottom: 1.25rem;
+}
+.footer__logo-text {
+  color: #FFFFFF;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.125rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.64rem;
+  text-align: left;
+  display: flex;
+}
+.footer__logo-text a {
+  display: flex;
+  align-items: center;
+  line-height: 1.75rem;
+}
 .footer__link-item span {
-  margin-right: 5px;
+  margin-right: 0.3125rem;
   display: flex;
   color: #FFFFFF;
 }
-
 .footer__link-item-icon {
-  width: 11.92px;
-  height: 13px;
   color: #FFFFFF;
 }
-.footer__link-item-icon i {
-  font-size: 13px;
-}
-
 .footer__link {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.171875rem;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: white;
   text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.171875rem;
+}
+.footer__link:hover {
+  text-decoration: underline;
+  color: white;
 }

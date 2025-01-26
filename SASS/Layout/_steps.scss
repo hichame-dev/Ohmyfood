@@ -56,27 +56,19 @@
             // margin-right: 38px;
         }
 
+        
+
         .step__text {
             margin-left: $step-number-offset;
             justify-self: center;
         }
     }
 
-    .step:not(:first-child) .step__icon {
-        margin-left: 28px;
-        /* Pousser l'icone vers la gauche */
-
-    }
-
-    .step:not(:first-child) .step__text {
-        margin-right: 30px;
-        /* Pousser le texte vers la gauche */
-
-    }
+    
 }
 
-.step__content {
-    margin: left 24px;
+.step__icon__store {
+    color: $step-color;
 }
 
 

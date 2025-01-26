@@ -56,15 +56,7 @@
   margin-left: 1.25rem;
   justify-self: center;
 }
-.steps .step:not(:first-child) .step__icon {
-  margin-left: 28px;
-  /* Pousser l'icone vers la gauche */
-}
-.steps .step:not(:first-child) .step__text {
-  margin-right: 30px;
-  /* Pousser le texte vers la gauche */
-}
 
-.step__content {
-  margin: left 24px;
+.step__icon__store {
+  color: #9356DC;
 }

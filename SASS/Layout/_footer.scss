@@ -1,85 +1,64 @@
 @use '../abstracts/variables'as *;
 @use '../abstracts/mixins'as *;
-@use '../base/typography' as *;
-
-
+@use '../base/typography'as *;
 
 .footer {
-    width: 100%;
-    min-height: 186px;
+    @include footer-layout;
     background-color: $secondary-color;
-    padding: 22px 25px;
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
-}
 
-.footer__container {
-    max-width: 375px;
-}
 
-.footer__logo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
-
-    a {
+    &__logo {
         display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: flex-start;
+        padding-bottom: 1.25rem;
+        
+    }
+
+    &__logo-text {
+        color: $background-color;
+        @include logo-text;
+        display: flex;
+
+        a {
+            display: flex;
+            align-items: center;
+            line-height: $line-height-large;
+        }
+    }
+
+
+    &__link-item {
+
+        span {
+            margin-right: 0.3125rem;
+            display: flex;
+            color: $background-color;
+        }
+    }
+
+    &__link-item-icon {
+        color: $background-color;
+    }
+
+
+    &__link {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.171875rem;
+        text-align: left;
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        line-height: 1.171875rem;
+
+
+
+        &:hover {
+            text-decoration: underline;
+            color: lighten($background-color, 10%);
+        }
     }
 }
-
-.footer__logo-img {
-    max-width: 120px;
-    
-    
-}
-
-.footer__nav {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.footer__links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.footer__link-item {
-    display: flex;
-    align-items: center;
-}
-
-.footer__link-item span {
-    margin-right: 5px;
-    display: flex;
-    color: $background-color;
-}
-
-.footer__link-item-icon {
-    width: 11.92px;
-    height: 13px;
-    color: $background-color;
-    
-
-    i {
-        font-size: 13px;
-    }
-}
-
-.footer__link {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.171875rem;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: white;
-    text-decoration: none;
-}
-
