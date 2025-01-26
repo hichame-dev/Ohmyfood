@@ -4,6 +4,7 @@
 @use '../base/typography'as *;
 
 
+
 .intro {
   width: 100%;
   background-color: $card-background;
@@ -129,37 +130,27 @@
   background-color: #f7f7f7;
   display: flex;
   flex-direction: column;
-  
   gap: 18px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
-
+  
 
   &__title h2 {
     margin-bottom: 1.625rem;
     padding-left: 17px;
-    /* Modification ici pour mettre 17px à gauche */
-    // align-self: flex-start;  // On retire cette propriété
     width: 100%;
     margin-top: 54px;
-
-    @media screen and (min-width: 768px) {
-      font-size: 1.4rem;
-    }
   }
 
   &__grid {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 375px;
-
+    
   }
 
   .card {
     width: 100%;
-    max-width: 340px;
     height: auto;
     background-color: white;
     border-radius: 15px;
@@ -167,21 +158,27 @@
     overflow: hidden;
     position: relative;
     margin-bottom: 18px;
+    display: flex;
+    /* On ajoute un display flex */
+    flex-direction: column;
+    /* On les mets en colonne */
+
 
     &:hover {
       box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     }
 
     &__image-container {
-      position: relative;
-      object-fit: cover;
+      display: flex;
+      overflow: hidden;
+      max-height: 200px;
+      /* Contrainte de hauteur maximale pour l'image */
     }
 
     &__img {
-      position: relative;
-      //left: -3px;
-      //top: -57px; On retire ces propriété
-      object-fit: cover; // Remise du object-fit cover
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       box-shadow: 0px 4px 15px 0px #0000001A;
     }
 
@@ -197,13 +194,12 @@
     &__text {
       display: flex;
       flex-direction: column;
-      row-gap: 5px;
     }
 
     &__title {
       @extend .card__title;
       position: relative;
-      top: 0;
+      margin-top: 16px;
       left: 0;
     }
 
@@ -215,6 +211,7 @@
     &__icon-pink {
       width: 22px;
       height: 21px;
+      margin-top: 16px;
       justify-self: end;
       align-self: start;
 
@@ -233,7 +230,5 @@
       border-radius: 2px;
       font-size: 0.875rem;
     }
-
-    
   }
 }

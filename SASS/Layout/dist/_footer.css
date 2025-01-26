@@ -1,0 +1,103 @@
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 54px;
+}
+
+.card__title {
+  width: 267px;
+  height: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  /*  Autres styles */
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.footer {
+  width: 100%;
+  min-height: 186px;
+  background-color: #353535;
+  padding: 22px 25px;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.footer__container {
+  max-width: 375px;
+}
+
+.footer__logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.footer__logo a {
+  display: flex;
+}
+
+.footer__logo-img {
+  max-width: 120px;
+}
+
+.footer__nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer__links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__link-item {
+  display: flex;
+  align-items: center;
+}
+
+.footer__link-item span {
+  margin-right: 5px;
+  display: flex;
+  color: #FFFFFF;
+}
+
+.footer__link-item-icon {
+  width: 11.92px;
+  height: 13px;
+  color: #FFFFFF;
+}
+.footer__link-item-icon i {
+  font-size: 13px;
+}
+
+.footer__link {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.171875rem;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: white;
+  text-decoration: none;
+}

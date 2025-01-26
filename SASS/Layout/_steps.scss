@@ -29,8 +29,9 @@
             $step-box-shadow);
         // position: relative;
         display: flex; // Ajout display flex pour alignement des elements
-        align-items: center; // On ajoute l'alignement des elements
-    
+        flex-wrap: nowrap;  /* On empêche le passage à la ligne */
+        // align-items: center; // On ajoute l'alignement des elements
+
 
         .step__number {
             position: absolute;
@@ -60,10 +61,22 @@
             justify-self: center;
         }
     }
+
+    .step:not(:first-child) .step__icon {
+        margin-left: 28px;
+        /* Pousser l'icone vers la gauche */
+
+    }
+
+    .step:not(:first-child) .step__text {
+        margin-right: 30px;
+        /* Pousser le texte vers la gauche */
+
+    }
 }
 
-.step__icon__store {
-    color: $step-color;
+.step__content {
+    margin: left 24px;
 }
 
-// Media query pour 1024px et 1440px
+

@@ -164,6 +164,81 @@ ol {
   white-space: nowrap;
 }
 
+.footer {
+  width: 100%;
+  min-height: 186px;
+  background-color: #353535;
+  padding: 22px 25px;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.footer__container {
+  max-width: 375px;
+}
+
+.footer__logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.footer__logo a {
+  display: flex;
+}
+
+.footer__logo-img {
+  max-width: 120px;
+}
+
+.footer__nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer__links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__link-item {
+  display: flex;
+  align-items: center;
+}
+
+.footer__link-item span {
+  margin-right: 5px;
+  display: flex;
+  color: #FFFFFF;
+}
+
+.footer__link-item-icon {
+  width: 11.92px;
+  height: 13px;
+  color: #FFFFFF;
+}
+.footer__link-item-icon i {
+  font-size: 13px;
+}
+
+.footer__link {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.171875rem;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: white;
+  text-decoration: none;
+}
+
 .main-container {
   width: 100%;
   margin: 0 auto;
@@ -204,7 +279,7 @@ ol {
   padding: 20px 20px;
   /* padding haut, bas 20px et gauche droite */
   display: flex;
-  align-items: center;
+  flex-wrap: nowrap; /* On empêche le passage à la ligne */
 }
 .steps .step .step__number {
   position: absolute;
@@ -230,9 +305,17 @@ ol {
   margin-left: 1.25rem;
   justify-self: center;
 }
+.steps .step:not(:first-child) .step__icon {
+  margin-left: 28px;
+  /* Pousser l'icone vers la gauche */
+}
+.steps .step:not(:first-child) .step__text {
+  margin-right: 30px;
+  /* Pousser le texte vers la gauche */
+}
 
-.step__icon__store {
-  color: #9356DC;
+.step__content {
+  margin: left 24px;
 }
 
 .intro {
@@ -346,29 +429,20 @@ ol {
   gap: 18px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
 }
 .restaurants__title h2 {
   margin-bottom: 1.625rem;
   padding-left: 17px;
-  /* Modification ici pour mettre 17px à gauche */
   width: 100%;
   margin-top: 54px;
-}
-@media screen and (min-width: 768px) {
-  .restaurants__title h2 {
-    font-size: 1.4rem;
-  }
 }
 .restaurants__grid {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 375px;
 }
 .restaurants .card {
   width: 100%;
-  max-width: 340px;
   height: auto;
   background-color: white;
   border-radius: 15px;
@@ -376,17 +450,23 @@ ol {
   overflow: hidden;
   position: relative;
   margin-bottom: 18px;
+  display: flex;
+  /* On ajoute un display flex */
+  flex-direction: column;
+  /* On les mets en colonne */
 }
 .restaurants .card:hover {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 .restaurants .card__image-container {
-  position: relative;
-  -o-object-fit: cover;
-     object-fit: cover;
+  display: flex;
+  overflow: hidden;
+  max-height: 200px;
+  /* Contrainte de hauteur maximale pour l'image */
 }
 .restaurants .card__img {
-  position: relative;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
@@ -402,11 +482,10 @@ ol {
 .restaurants .card__text {
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
 }
 .restaurants .card__title {
   position: relative;
-  top: 0;
+  margin-top: 16px;
   left: 0;
 }
 .restaurants .card__location {
@@ -416,6 +495,7 @@ ol {
 .restaurants .card__icon-pink {
   width: 22px;
   height: 21px;
+  margin-top: 16px;
   justify-self: end;
   align-self: start;
 }
