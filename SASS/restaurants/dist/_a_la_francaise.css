@@ -85,6 +85,7 @@ ol {
   list-style: none;
 }
 
+
 .restaurant-title {
   font-family: "Shrikhand", cursive;
   /* Ajout de "cursive" comme alternative */
@@ -95,6 +96,7 @@ ol {
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+
 }
 
 .btn {
@@ -388,4 +390,5 @@ ol {
   align-items: center;
   padding-bottom: 20px;
   padding: 17px;
+
 }
