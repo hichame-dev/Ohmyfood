@@ -1,0 +1,74 @@
+@use '../abstracts/variables'as *;
+@use '../abstracts/mixins'as *;
+
+.steps {
+    width: 100%;
+    margin-top: 3rem;
+    padding: 0 1.25rem; // On met un padding horizontal a la place du left et du right
+    background-color: $background-color;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+
+    &__title {
+        margin-bottom: 1.625rem;
+    }
+
+    &__list {
+        display: grid;
+        width: 100%;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(323px, 330px));
+    }
+
+    .step {
+        @include step-style($step-box-width,
+            $step-box-height,
+            $step-box-background,
+            $step-box-border-radius,
+            $step-box-shadow);
+        // position: relative;
+        display: flex; // Ajout display flex pour alignement des elements
+        flex-wrap: nowrap;  /* On empêche le passage à la ligne */
+        // align-items: center; // On ajoute l'alignement des elements
+
+
+        .step__number {
+            position: absolute;
+            left: 10px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: $step-color;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-right: 24px;
+        }
+
+        .step__icon {
+            width: $step-icon-width;
+            height: $step-icon-height;
+            color: $icone-color;
+            // margin-right: 38px;
+        }
+
+        
+
+        .step__text {
+            margin-left: $step-number-offset;
+            justify-self: center;
+        }
+    }
+
+    
+}
+
+.step__icon__store {
+    color: $step-color;
+}
+
+

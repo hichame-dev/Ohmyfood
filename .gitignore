@@ -1,0 +1,21 @@
+
+# Fichiers système
+.bash_history
+.gitconfig
+.lesshst
+.ssh/
+.viminfo
+.vscode/
+NTUSER.DAT*
+ntuser.ini
+AppData/
+Desktop/
+Documents/
+Downloads/
+Pictures/
+Music/
+Videos/
+
+# Node modules
+node_modules/
+

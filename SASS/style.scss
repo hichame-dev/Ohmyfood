@@ -1,0 +1,29 @@
+// Base
+@use './abstracts/variables'as *;
+@use './abstracts/mixins'as *;
+@use './abstracts/animations';
+@use './abstracts/breakpoints';
+
+@use './base/reset'as *;
+@use './base/base';
+@use './base/typography';
+
+// Components
+@use './components/buttons';
+@use './components/card';
+
+// Layout
+@use './layout/header';
+@use './layout/footer';
+@use './layout/grid';
+@use './Layout/steps';
+
+// RESTAURANTS//
+
+
+// Pages
+@use './pages/home';
+body {
+    margin: 0;
+}
+

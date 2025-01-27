@@ -1,0 +1,23 @@
+@use '../abstracts/variables'as *;
+@use '../abstracts/mixins'as *;
+
+
+.main-container {
+    width: 100%; // Pleine largeur pour mobile
+    margin: 0 auto; // Centre le conteneur
+  }
+    
+    
+    
+  
+    // Grille générique
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr; // Une seule colonne en mobile
+    }
+    
+  
+
+  
+  
+  

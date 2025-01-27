@@ -1,0 +1,144 @@
+@use './variables'as *; // Importer les variables pour les utiliser dans les mixins
+
+// _mixins.scss boutton//
+
+@mixin button-style($bg-color, $width, $height, $radius, $shadow, $text-color, $font-family, $font-size) {
+  background: $bg-color; // Couleur de fond du bouton
+  border-radius: $radius; // Rayon des coins arrondis
+  box-shadow: $shadow; // Ombre du bouton
+  text-align: center; // Centrer le texte horizontalement
+  display: inline-flex; // Utilisation de flexbox pour centrer le texte
+  justify-content: center; // Centrer horizontalement
+  align-items: center; // Centrer verticalement
+  white-space: nowrap;
+  color: $text-color; // Couleur du texte
+  font-family: $font-family; // Police du bouton
+  font-size: $font-size; // Taille du texte du bouton
+  line-height: 1.5; // Hauteur de ligne
+  text-decoration: none; // Enlever les décorations de texte
+  cursor: pointer; // Curseur pointer pour le bouton
+  padding: 13px 1rem; // Padding horizontal
+  transition: background 0.3s, box-shadow 0.3s; // Transition pour les effets
+}
+
+
+
+
+// Mixin simple pour les étapes
+@mixin step-style($step-box-width, $step-box-height, $step-box-background, $step-box-border-radius,
+  $step-box-shadow) {
+  width: 100%;
+  min-height: $step-box-height;
+  background-color: $step-box-background;
+  border-radius: $step-box-border-radius;
+  box-shadow: $step-box-shadow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+  /* padding haut, bas 20px et gauche droite */
+}
+
+
+
+// Mixin pour les cartes avec tag "Nouveau"
+// Mixin pour les cartes avec tag "Nouveau"
+@mixin card-with-tag {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+
+
+  &:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+// Mixin pour les cartes sans tag "Nouveau"
+@mixin card-without-tag {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+// footer
+
+@mixin logo-text {
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.125rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.64rem;
+  text-align: left;
+}
+
+// _mixins.scss
+
+// _mixins.scss
+
+@mixin footer-layout {
+  width: 100%; // Largeur adaptable à l'écran
+  min-height: 186px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  gap: 1rem; // Gap en unité relative
+  padding: 1.375rem 1.5625rem; // padding en unité relative
+
+  &__container {
+    max-width: 375px; // Garder une max-width pour les grands écrans
+
+  }
+
+
+  &__logo {
+    width: 100%;
+    display: flex;
+    
+    
+
+
+  }
+
+  &__nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4375rem; // Gap entre les liens
+
+  }
+
+  &__link-item {
+    display: flex;
+    align-items: center;
+
+  }
+
+
+  &__link-item-icon {
+    width: 0.745rem;
+    height: 0.8125rem;
+
+    i {
+      font-size: 0.8125rem;
+    }
+  }
+
+
+}
