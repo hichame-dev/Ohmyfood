@@ -85,6 +85,7 @@ ol {
   list-style: none;
 }
 
+
 .restaurant-title {
   font-family: "Shrikhand", cursive;
   /* Ajout de "cursive" comme alternative */
@@ -96,6 +97,7 @@ ol {
   text-underline-position: from-font;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+
 }
 
 .btn {
@@ -731,6 +733,7 @@ ol {
 }
 
 .restaurant-header {
+
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -781,12 +784,14 @@ ol {
 }
 
 .restaurant-header {
+
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
   padding: 17px;
+
 }
 
 .header {
@@ -831,12 +836,14 @@ ol {
 }
 
 .restaurant-header {
+
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 20px;
   padding: 17px;
+
 }
 
 body {
