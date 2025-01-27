@@ -85,24 +85,18 @@ ol {
   list-style: none;
 }
 
-h1 {
-  font-family: "Shrikhand", sans-serif;
-  /* Police Shrikhand */
+
+.restaurant-title {
+  font-family: "Shrikhand", cursive;
+  /* Ajout de "cursive" comme alternative */
   font-size: 28px;
-  /* Taille de police */
   font-style: italic;
-  /* Style italique */
   font-weight: 400;
-  /* Poids de la police */
   line-height: 40.82px;
-  /* Hauteur de ligne */
   text-align: left;
-  padding: 17px;
-  /* Alignement du texte à gauche */
   text-underline-position: from-font;
-  /* Position de soulignement (si nécessaire) */
   text-decoration-skip-ink: none;
-  /* Pour éviter l'activation du soulignement ou le "saut de l'encre" */
+
 }
 
 .btn {
@@ -341,4 +335,9 @@ h1 {
 
 .step__icon__store {
   color: #9356DC;
+}
+
+.card__checkbox {
+  display: none;
+  /* Rendre visible le checkbox */
 }

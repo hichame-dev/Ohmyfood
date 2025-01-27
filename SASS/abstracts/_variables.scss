@@ -148,27 +148,12 @@ $step-icon-left-offset: 4.12375rem; // 65.98 / 16 = 4.12375
 $step-number-offset: 1.25rem; // 20 / 16 = 1.25
 $step-text-offset: 1.6875rem;
 
-// Restaurants
-// Variables ajoutées pour le titre et le cœur
-$icon-size: 22px; // Taille de l'icône du cœur
-$icon-hover-color: #FF79DA; // Couleur au survol de l'icône
-$icon-offset: 41px; // Marge à droite de l'icône cœur
-$title-padding-left: 17px; // Padding à gauche du titre
-$icon-top: 40px; // Position verticale du cœur
-$icon-right: 41px; // Position horizontale du cœur à droite
 
-// Variables pour l'alignement du titre et du cœur
-$restaurant-title-padding-left: 17px; // Padding à gauche du titre
-$restaurant-title-margin-right: 41px; // Marge à droite du titre pour l'aligner avec le cœur
-$card-icon-pink-width: 22px; // Largeur du cœur
-$card-icon-pink-height: 21px; // Hauteur du cœur
-
-
-
-
-
-
-
+$card-icon-pink-width: 1.375rem; // Largeur du cœur (22px)
+$card-icon-pink-height: 1.3125rem; // Hauteur du cœur (21px)
+$card-icon-pink-color: #FF79DA; // Couleur de l'icône (rose)
+$card-icon-pink-position-top: 2.5rem; // Position du cœur depuis le haut (40px)
+$card-icon-pink-position-right: 2.5625rem; // Position du cœur depuis la droite (41px)
 
 
 

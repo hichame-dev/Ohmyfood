@@ -65,43 +65,56 @@
     }
 }
 
-@mixin restaurant-title-heart($icon-size, $icon-hover-color, $icon-offset, $title-padding-left, $icon-top, $icon-right) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    padding-left: $title-padding-left;
+@mixin card-icon-pink {
+    $card-icon-pink-width: 1.375rem;
+    $card-icon-pink-height: 1.3125rem;
+    $card-icon-pink-color: #FF79DA;
+    $card-icon-pink-position-top: 2.5rem;
+    $card-icon-pink-position-right: 2.5625rem;
 
-    .restaurant-title {
-        margin-right: $icon-offset;
-        padding-left: 0;
+    position: absolute;
+    top: $card-icon-pink-position-top;
+    right: $card-icon-pink-position-right;
+    width: $card-icon-pink-width;
+    height: $card-icon-pink-height;
+    color: $card-icon-pink-color;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
     }
 
-    .card__icon-pink {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        right: $icon-right;
-        width: $icon-size;
-        height: $icon-size;
-
-        input[type="checkbox"] {
-            opacity: 0;
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-
-        i {
-            font-size: $icon-size;
-            transition: color 0.3s;
-        }
-
-        &:hover i {
-            color: $icon-hover-color;
-        }
+    &::before {
+        content: '\f004';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
     }
 }
 
+@mixin header-title-and-icon-alignment {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-left: 1.0625rem;
+    /* 17px */
+    padding-right: 1.0625rem;
+    /* 17px */
+}
 
+.card__checkbox {
+    display: none;
+    /* Rendre visible le checkbox */
+}
+
+@mixin header-title-and-icon-alignment {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    padding: 17px;
+}
