@@ -16,43 +16,50 @@
 @use '../layout/steps';
 
 
-@mixin centered-flex() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin button-style($color, $padding) {
-    background-color: $color;
-    color: white;
-    padding: $padding;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-@mixin font-style($size, $weight) {
-    font-size: $size;
-    font-weight: $weight;
-}
-
-// Mixin pour le header avec icône
-@mixin header-style-icon() {
-    width: 100%;
-    height: $header-height;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0px 4px 4px 0px #00000040;
-    background-color: $background-color;
-
-    .logo {
-        width: auto;
-        height: 30px;
-        max-height: 30px;
+@mixin header-style {
+    .header {
         display: flex;
+        justify-content: center; // Centre le contenu horizontalement
         align-items: center;
-        justify-content: center;
-        margin-top: 14px;
+        width: 100%;
+        height: 63px;
+        background-color: white; // ou la couleur de fond que vous souhaitez
+        position: relative;
+
+        .direction__icon {
+            position: absolute;
+            top: 17px;
+            left: 16px;
+            display: flex; // Ajoutez display flex pour aligner l'icone au centre du div
+            justify-content: center; //Centre l'icone dans le div
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            padding: 17px 0; //Padding vertical de 17px
+
+            a {
+                display: flex; // Ajoutez display flex pour aligner l'icone au centre du a
+                justify-content: center;
+                align-items: center;
+
+                i {
+                    font-size: 16px;
+                    padding: 0;
+                }
+            }
+        }
+
+        .logo__container {
+            position: absolute; // Positionnement absolute pour positionner le logo
+            left: 50%; // Positionne le logo au milieu
+            top: 50%; // Positionne le logo au milieu
+            transform: translate(-50%, -50%);
+            margin-top: 5px;
+
+            img {
+                width: 100%;
+                height: 36px;
+            }
+        }
     }
 }
