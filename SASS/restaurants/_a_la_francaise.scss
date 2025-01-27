@@ -18,3 +18,10 @@
 
 @include header-style;
 // Vous pouvez ajouter des styles spécifiques pour le header ici si besoin
+
+.restaurant-header {
+    @include restaurant-title-heart(1.375rem, #FF79DA, 2.5625rem, 1.0625rem, 2.5rem, 2.5625rem);
+}
+
+
+

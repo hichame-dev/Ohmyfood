@@ -14,52 +14,15 @@
 @use '../layout/footer';
 @use '../layout/grid';
 @use '../layout/steps';
+@use '../restaurants/mixins_personnalises' as *;
 
 
-@mixin header-style {
-    .header {
-        display: flex;
-        justify-content: center; // Centre le contenu horizontalement
-        align-items: center;
-        width: 100%;
-        height: 63px;
-        background-color: white; // ou la couleur de fond que vous souhaitez
-        position: relative;
 
-        .direction__icon {
-            position: absolute;
-            top: 17px;
-            left: 16px;
-            display: flex; // Ajoutez display flex pour aligner l'icone au centre du div
-            justify-content: center; //Centre l'icone dans le div
-            align-items: center;
-            width: 30px;
-            height: 30px;
-            padding: 17px 0; //Padding vertical de 17px
+@include header-style;
+// Vous pouvez ajouter des styles spécifiques pour le header ici si besoin
 
-            a {
-                display: flex; // Ajoutez display flex pour aligner l'icone au centre du a
-                justify-content: center;
-                align-items: center;
-
-                i {
-                    font-size: 16px;
-                    padding: 0;
-                }
-            }
-        }
-
-        .logo__container {
-            position: absolute; // Positionnement absolute pour positionner le logo
-            left: 50%; // Positionne le logo au milieu
-            top: 50%; // Positionne le logo au milieu
-            transform: translate(-50%, -50%);
-            margin-top: 5px;
-
-            img {
-                width: 100%;
-                height: 36px;
-            }
-        }
-    }
+.restaurant-header {
+    @include restaurant-title-heart(1.375rem, #FF79DA, 2.5625rem, 1.0625rem, 2.5rem, 2.5625rem);
 }
+
+
