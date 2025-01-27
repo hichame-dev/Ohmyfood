@@ -85,6 +85,18 @@ ol {
   list-style: none;
 }
 
+.restaurant-title {
+  font-family: "Shrikhand", cursive;
+  /* Ajout de "cursive" comme alternative */
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 40.82px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
 .btn {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   border-radius: 25px;
@@ -321,4 +333,9 @@ ol {
 
 .step__icon__store {
   color: #9356DC;
+}
+
+.card__checkbox {
+  display: none;
+  /* Rendre visible le checkbox */
 }

@@ -63,3 +63,57 @@
         }
     }
 }
+
+@mixin card-icon-pink {
+    $card-icon-pink-width: 1.375rem;
+    $card-icon-pink-height: 1.3125rem;
+    $card-icon-pink-color: #FF79DA;
+    $card-icon-pink-position-top: 2.5rem;
+    $card-icon-pink-position-right: 2.5625rem;
+
+    position: absolute;
+    top: $card-icon-pink-position-top;
+    right: $card-icon-pink-position-right;
+    width: $card-icon-pink-width;
+    height: $card-icon-pink-height;
+    color: $card-icon-pink-color;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &::before {
+        content: '\f004';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+    }
+}
+
+@mixin header-title-and-icon-alignment {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-left: 1.0625rem;
+    /* 17px */
+    padding-right: 1.0625rem;
+    /* 17px */
+}
+
+.card__checkbox {
+    display: none;
+    /* Rendre visible le checkbox */
+}
+
+@mixin header-title-and-icon-alignment {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    padding: 17px;
+}

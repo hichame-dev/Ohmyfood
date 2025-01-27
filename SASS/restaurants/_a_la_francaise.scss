@@ -18,3 +18,7 @@
 
 @include header-style;
 // Vous pouvez ajouter des styles spécifiques pour le header ici si besoin
+
+.restaurant-header {
+    @include header-title-and-icon-alignment;
+}
