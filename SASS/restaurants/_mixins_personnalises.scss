@@ -5,7 +5,8 @@
 
 @use '../base/reset'as *;
 @use '../base/base';
-@use '../base/typography';
+
+
 
 @use '../components/buttons';
 
@@ -60,6 +61,7 @@
             img {
                 width: 100%;
                 height: 36px;
+                display: block;
             }
         }
     }
@@ -118,3 +120,36 @@
     padding-bottom: 20px;
     padding: 17px;
 }
+
+// Mixin pour la bannière du restaurant
+@mixin restaurant-banner($width: 100%, $height: auto, $img-height: 275px) {
+    position: relative;
+    width: $width;
+    height: $height;
+
+    .banner-img {
+        width: 100%;
+        height: $img-height;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+// Mixin pour le menu-container
+@mixin menu-container($bg-color: $card-background,
+    $border-radius: 40px 40px 0 0,
+    $padding: 13px,
+    $gap: 40px,
+    $margin-top: -37px,
+    $z-index: 2) {
+    position: relative;
+    background-color: $bg-color;
+    border-radius: $border-radius;
+    padding: $padding;
+    gap: $gap;
+    margin-top: $margin-top;
+    z-index: $z-index;
+}
+
+
+

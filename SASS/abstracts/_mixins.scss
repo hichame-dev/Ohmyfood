@@ -1,6 +1,6 @@
 @use './variables'as *; // Importer les variables pour les utiliser dans les mixins
+ // Importer les styles de typographie pour les utiliser dans les mixins
 
-// _mixins.scss boutton//
 
 @mixin button-style($bg-color, $width, $height, $radius, $shadow, $text-color, $font-family, $font-size) {
   background: $bg-color; // Couleur de fond du bouton

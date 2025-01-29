@@ -1,0 +1,64 @@
+.custom-p {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 19.92px;
+  text-align: left;
+}
+
+.custom-a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.custom-h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 40.82px;
+}
+
+.custom-h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.13px;
+}
+
+.custom-h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.09px;
+}
+
+.restaurant-h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 40.82px;
+}
+
+.restaurant-h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18.75px;
+}
+
+.restaurant-h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.09px;
+}
+
+.custom-price {
+  font-family: "Roboto", sans-serif;
+  font-size: 15.04px;
+  font-weight: 700;
+  line-height: 17.63px;
+  text-align: center;
+}
