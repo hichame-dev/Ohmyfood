@@ -98,6 +98,8 @@
 
   .intro__title {
     margin-top: 30px;
+    
+
   }
 
   .intro__title {
@@ -124,7 +126,9 @@
 //restaurants//
 .restaurants {
   width: 100%;
-  padding: 0 18px;
+  padding-top: 54px; // Ajoute de l'espace à l'intérieur, au-dessus du contenu
+  margin-top: 68px; // Ajoute de l'espace au-dessus de la section
+  
   padding-left: 17px;
   margin-top: 3rem;
   background-color: #f7f7f7;

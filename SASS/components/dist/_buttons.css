@@ -35,3 +35,8 @@
 .parent-container {
   width: 100%;
 }
+
+.btn {
+  width: 218px;
+  box-sizing: border-box;
+}

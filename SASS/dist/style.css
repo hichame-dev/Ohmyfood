@@ -17,6 +17,99 @@ input {
   font-family: inherit;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+
+body.index h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  font-style: normal;
+  color: #000000;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.32rem;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 300;
+  line-height: 1.245rem;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+}
+
+.step__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.32rem;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+}
+
+.card__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.32rem;
+  text-align: left;
+}
+
+.card__location {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 300;
+  line-height: 1.245rem;
+  text-align: left;
+  color: #353535;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.card__icon {
+  font-weight: 400;
+}
+
 html,
 body {
   margin: 0;
@@ -55,80 +148,6 @@ main {
     width: 100%;
   }
 }
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 17px;
-  font-weight: 300;
-  line-height: 19.92px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-
-h1 {
-  font-family: "Shrikhand", cursive;
-  font-size: 28px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 40.82px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-
-h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28.13px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-
-h3 {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 21.09px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-
-p {
-  font-family: "Roboto", sans-serif;
-  font-size: 17px;
-  font-weight: 300;
-  line-height: 19.92px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.card__title, .restaurants .card__title {
-  width: 267px;
-  height: 20px;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.restaurant-title {
-  font-family: "Shrikhand", cursive;
-  font-size: 28px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 40.82px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-
 .btn {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   border-radius: 25px;
@@ -167,12 +186,16 @@ a {
   width: 100%;
 }
 
+.btn {
+  width: 218px;
+  box-sizing: border-box;
+}
+
 .restaurants {
   width: 100%;
-  padding: 0 1.25rem;
-  margin-top: 3rem;
   background-color: #f7f7f7;
-  padding-top: 54px;
+  padding: 54px 1.25rem 0;
+  margin-top: 68px;
 }
 .restaurants__title {
   margin-bottom: 3.375rem;
@@ -615,89 +638,6 @@ a {
   font-size: 0.875rem;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 15.04px;
-  font-weight: 300;
-  line-height: 17.63px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-
-p {
-  font-family: "Roboto", sans-serif;
-  font-size: 15.04px;
-  font-weight: 300;
-  line-height: 17.63px;
-  text-align: left;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-h1,
-h2,
-h3 {
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-
-.index-title {
-  font-family: "Shrikhand", cursive;
-  font-size: 28px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 40.82px;
-}
-
-.index-h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28.13px;
-}
-
-.index-h3 {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 21.09px;
-}
-
-.restaurant-title {
-  font-family: "Shrikhand", cursive;
-  font-size: 28px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 40.82px;
-}
-
-.restaurant-h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 18.75px;
-}
-
-.restaurant-h3 {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 21.09px;
-}
-
-.price {
-  font-family: "Roboto", sans-serif;
-  font-size: 15.04px;
-  font-weight: 700;
-  line-height: 17.63px;
-  text-align: center;
-}
-
 .card__checkbox {
   display: none;
   /* Rendre visible le checkbox */
@@ -778,6 +718,11 @@ html {
   gap: 40px;
   margin-top: -37px;
   z-index: 2;
+}
+.menu-container h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .menu__section h2 {
@@ -935,6 +880,11 @@ html {
   align-items: center;
   padding-bottom: 20px;
   padding: 17px;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 body {

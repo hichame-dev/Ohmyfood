@@ -1,0 +1,49 @@
+@use '../abstracts/variables'as *; // Variables globales (couleurs, typographies, tailles)
+
+// _typography-restaurants.scss
+
+
+// 🌍 **H1 - Titre principal** (utilise les variables de typographie)
+.restaurant__title {
+    font-family: $font-family-secondary; // Police Shrikhand pour le titre
+    font-size: $font-size-xl; // 28px
+    font-style: italic;
+    font-weight: $font-weight-regular; // 400
+    line-height: $line-height-xl; // 40.82px
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+// 🌍 **H2 - Sous-titre** (utilise les variables de typographie)
+.restaurant__subtitle {
+    font-family: $font-family-primary; // Police Roboto pour le sous-titre
+    font-size: $font-size-small; // 16px
+    font-weight: $font-weight-light; // 300
+    line-height: $line-height-small; // 18.75px
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+// 🌍 **H3 - Titre secondaire** (utilise les variables de typographie)
+.restaurant__h3 {
+    font-family: $font-family-primary; // Police Roboto pour les titres secondaires
+    font-size: $font-size-medium; // 18px
+    font-weight: $font-weight-medium; // 500
+    line-height: $line-height-medium; // 21.09px
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+// 🌍 **P - Paragraphe** (utilise les variables de typographie)
+.restaurant__p {
+    font-family: $font-family-primary; // Police Roboto pour le texte des paragraphes
+    font-size: $font-size-xs; // 15.04px
+    font-weight: $font-weight-light; // 300
+    line-height: $line-height-xs; // 17.63px
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}

@@ -1,14 +1,19 @@
+@use '../abstracts/variables' as *;
+
+@use '../abstracts/mixins' as *;
+
+// Mixin pour les cartes avec tag "Nouveau"
 @use '../abstracts/variables'as *;
 @use '../abstracts/mixins'as *;
 
 
-// Mixin pour les cartes avec tag "Nouveau"
 .restaurants {
     width: 100%;
-    padding: 0 1.25rem;
-    margin-top: 3rem;
     background-color: #f7f7f7;
-    padding-top: 54px;
+
+    // Ajout des espacements demandés
+    
+    
 
     &__title {
         margin-bottom: $spacing-large;
@@ -23,26 +28,10 @@
     }
 
     .restaurants__title {
-        margin-bottom: 1.625rem; // Espacement spécifique pour ce titre
-        padding-left: 10px; // Décalage uniquement pour ce titre
-    }
-
-
-
-
-    .card {
-        &--new {
-            @include card-with-tag;
-        }
-
-        &:not(.card--new) {
-            @include card-without-tag;
-        }
-
-        &__img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+        margin-bottom: 1.625rem;
+        padding-left: 10px;
     }
 }
+
+
+

@@ -1,34 +1,42 @@
-// Base
-// 📌 **Base (Variables, Mixins, Animations, Breakpoints)**
+// 🌍 Abstracts (Variables, Mixins, Animations, Breakpoints)
+// 🌍 **1. Imports des fichiers globaux**
 @use './abstracts/variables'as *;
 @use './abstracts/mixins'as *;
 @use './abstracts/animations';
 @use './abstracts/breakpoints';
 
-// 📌 **Base (Reset, Styles généraux, Typographie)**
-@use './base/reset'as *;
-@use './base/base';
+// 📌 **2. Base (Reset, Typographie, Styles de base)**
+@use './base/reset';
 @use './base/typography';
+@use './base/base';
 
-// 📌 **Composants**
+// 📌 **3. Composants réutilisables**
 @use './components/buttons';
 @use './components/card';
 
-// 📌 **Layouts (Structure du site)**
+// 📌 **4. Layout (Structure du site)**
 @use './layout/header';
 @use './layout/footer';
 @use './layout/grid';
 @use './layout/steps';
 
-// 📌 **Pages principales**
+// 📌 **5. Pages principales**
 @use './pages/home';
+@use './pages/responsive';
 
-// 📌 **Pages Restaurants**
+// 📌 **6. Pages Restaurants**
 @use './restaurants/mixins_personnalises'as *;
 @use './restaurants/a_la_francaise';
 @use './restaurants/la_note_enchante';
 @use './restaurants/la_palette_du_gout';
 @use './restaurants/le_delice_des_sens';
+
+// 🌍 **7. Styles globaux supplémentaires**
+body {
+    margin: 0;
+    font-family: $font-family-primary;
+}
+
 
 
 

@@ -45,7 +45,8 @@
 
 }
 
-@media (min-width: $tablet-width) {
-
+.btn {
+  width: 218px;
+  box-sizing: border-box; // Garde le padding à l'intérieur du bouton
 }
 
