@@ -1,0 +1,40 @@
+.restaurant__title {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.75rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 2.55rem;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.restaurant__subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 300;
+  line-height: 1.245rem;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.restaurant__h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.32rem;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.restaurant__p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  line-height: 1.1rem;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}

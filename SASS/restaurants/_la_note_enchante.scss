@@ -1,29 +1,36 @@
-@use '../abstracts/variables'as *;
-@use '../abstracts/mixins'as *;
-@use '../abstracts/animations'as *;
-@use '../abstracts/breakpoints';
+@use '../abstracts/variables'as *; // Variables globales (couleurs, typographies, tailles)
 
-@use '../base/reset'as *;
-@use '../base/base';
-@use '../base/typography';
+@use '../base/base'; // Styles généraux
 
-@use '../components/buttons';
+@use './mixins_personnalises'as *; // Mixins spécifiques aux restaurants
 
+@use '../restaurants/typo_custom'as *; // Mixins spécifiques aux restaurants
 
-@use '../layout/header';
-@use '../layout/footer';
-@use '../layout/grid';
-@use '../layout/steps';
-
-@use './_mixins_personnalises'as *; // Si le fichier des mixins est dans le même dossier que ces fichiers
 
 
 @include header-style;
 // Vous pouvez ajouter des styles spécifiques pour le header ici si besoin
 
+html {
+    margin: 0;
+}
 
 .restaurant-header {
+
     @include header-title-and-icon-alignment;
 }
 
+.restaurant-banner {
+    @include restaurant-banner;
+}
 
+.menu-container {
+    @include menu-container;
+}
+
+
+
+
+.menu__section h2 {
+    margin-bottom: 0;
+}

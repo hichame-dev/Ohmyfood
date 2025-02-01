@@ -1,0 +1,18 @@
+.restaurants {
+  width: 100%;
+  background-color: #f7f7f7;
+}
+.restaurants__title {
+  margin-bottom: 3.375rem;
+  padding-left: 10px;
+}
+.restaurants__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+  padding-bottom: 30px;
+}
+.restaurants .restaurants__title {
+  margin-bottom: 1.625rem;
+  padding-left: 10px;
+}

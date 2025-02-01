@@ -1,0 +1,9 @@
+.main-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}

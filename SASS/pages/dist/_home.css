@@ -36,24 +36,88 @@
   width: 100%;
 }
 
+.btn {
+  width: 218px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+
+body.index h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  font-style: normal;
+  color: #000000;
+}
+
 h2 {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
+  line-height: 1.75rem;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
   color: #000000;
-  margin-top: 54px;
 }
 
-.card__title, .restaurants .card__title {
-  width: 267px;
-  height: 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  /*  Autres styles */
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.32rem;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
 }
 
 p {
   font-family: "Roboto", sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 300;
+  line-height: 1.245rem;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+}
+
+.step__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.32rem;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000000;
+}
+
+.card__title, .restaurants .card__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.32rem;
+  text-align: left;
+}
+
+.card__location {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 300;
+  line-height: 1.245rem;
+  text-align: left;
+  color: #353535;
 }
 
 a {
@@ -64,6 +128,10 @@ a {
 ul,
 ol {
   list-style: none;
+}
+
+.card__icon {
+  font-weight: 400;
 }
 
 .intro {
@@ -176,7 +244,8 @@ ol {
 }
 .restaurants {
   width: 100%;
-  padding: 0 18px;
+  padding-top: 54px;
+  margin-top: 68px;
   padding-left: 17px;
   margin-top: 3rem;
   background-color: #f7f7f7;

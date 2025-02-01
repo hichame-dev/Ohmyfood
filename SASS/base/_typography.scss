@@ -1,52 +1,111 @@
 @use '../abstracts/variables'as *;
-@use '../abstracts/mixins'as *;
 
 
+// 🌍 Typographie globale
+body {
+    font-family: $font-family-primary; // Roboto
+    font-size: 16px;
+    color: $primary-color;
+}
 
+// 📌 Style du H1 pour l’index (sans italique)
+body.index h1 {
+    font-family: $font-family-primary; // Roboto
+    font-size: $font-size-large; // 24px
+    font-weight: $font-weight-bold; // 700
+    line-height: $line-height-large; // 28px
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    font-style: normal;
+    color: $primary-color;
+}
+
+// 📌 Style du H2 pour l’index et les restaurants
 h2 {
-    font-family: $font-family-primary;
-    font-size: $font-size-large;
-    font-weight: $font-weight-bold;
-    color: $primary-color; 
-    margin-top: 54px;
+    font-family: $font-family-primary; // Roboto
+    font-size: $font-size-large; // 24px
+    font-weight: $font-weight-bold; // 700
+    line-height: $line-height-large; // 28px
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: $primary-color;
 }
 
 
 
-.card__title {
-    width: 267px;
-    height: 20px;
-    font-size: 1rem;
-    font-weight: bold;
-
-    /*  Autres styles */
+// 📌 Style du H3 pour les titres de cartes
+h3 {
+    font-family: $font-family-primary; // Roboto
+    font-size: $font-size-medium; // 18px
+    font-weight: $font-weight-bold; // 700
+    line-height: $line-height-medium; // 21.09px
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: $primary-color;
 }
 
-
+// 📌 Style des paragraphes
 p {
-    font-family: $font-family-primary;
+    font-family: $font-family-primary; // Roboto
+    font-size: $font-size-small; // 17px
+    font-weight: $font-weight-light; // 300
+    line-height: $line-height-small; // 19.92px
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: $primary-color;
 }
 
+// 📌 Style du texte dans les étapes
+.step__text {
+    font-family: $font-family-primary; // Roboto
+    font-size: $font-size-medium; // 18px
+    font-weight: $font-weight-medium; // 500
+    line-height: $line-height-medium; // 21.09px
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: $primary-color;
+}
+
+// 📌 Style des titres des cartes
+.card__title {
+    font-family: $font-family-primary;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-medium;
+    text-align: left;
+}
+
+// 📌 Style de la localisation des restaurants
+.card__location {
+    font-family: $font-family-primary;
+    font-size: $font-size-small;
+    font-weight: $font-weight-light;
+    line-height: $line-height-small;
+    text-align: left;
+    color: $secondary-color; // Gris foncé pour différencier la localisation
+}
+
+// 📌 Styles généraux des liens
 a {
     text-decoration: none;
     color: inherit;
 }
 
+// 📌 Suppression des styles par défaut des listes
 ul,
 ol {
     list-style: none;
 }
 
-
-.restaurant-title {
-    font-family: 'Shrikhand', cursive;
-    /* Ajout de "cursive" comme alternative */
-    font-size: 28px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 40.82px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+.card__icon {
+    font-weight: 400; // Moins épais (par défaut, FontAwesome solid est en 900)
 }
+
+
+// 📌 Style du titre d’introduction (spécifique à l’index)
 

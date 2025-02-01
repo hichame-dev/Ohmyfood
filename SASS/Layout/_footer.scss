@@ -1,6 +1,6 @@
 @use '../abstracts/variables'as *;
 @use '../abstracts/mixins'as *;
-@use '../base/typography'as *;
+
 
 .footer {
     @include footer-layout;
@@ -27,6 +27,7 @@
             line-height: $line-height-large;
         }
     }
+
 
 
     &__link-item {

@@ -1,22 +1,7 @@
-@use '../abstracts/variables'as *;
-@use '../abstracts/mixins'as *;
-@use '../abstracts/animations'as *;
-@use '../abstracts/breakpoints';
+@use '../abstracts/variables'as *; // Variables globales (couleurs, typographies, tailles)
+@use '../base/base'; // Styles généraux
 
-@use '../base/reset'as *;
-@use '../base/base';
-@use '../base/typography';
-
-@use '../components/buttons';
-
-
-@use '../layout/header';
-@use '../layout/footer';
-@use '../layout/grid';
-@use '../layout/steps';
-
-// Restaurants
-
+// ⬇️ Mixin pour l'entête (header) du site
 @mixin header-style {
     .header {
         display: flex;
@@ -24,22 +9,23 @@
         align-items: center;
         width: 100%;
         height: 63px;
-        background-color: white; // ou la couleur de fond que vous souhaitez
+        background-color: $card-background;
         position: relative;
 
+        // Mixin pour l'icône de retour
         .direction__icon {
             position: absolute;
             top: 17px;
             left: 16px;
-            display: flex; // Ajoutez display flex pour aligner l'icone au centre du div
-            justify-content: center; //Centre l'icone dans le div
+            display: flex;
+            justify-content: center;
             align-items: center;
             width: 30px;
             height: 30px;
-            padding: 17px 0; //Padding vertical de 17px
+            padding: 17px 0; // Padding vertical de 17px
 
             a {
-                display: flex; // Ajoutez display flex pour aligner l'icone au centre du a
+                display: flex;
                 justify-content: center;
                 align-items: center;
 
@@ -50,28 +36,35 @@
             }
         }
 
+        // Mixin pour le logo du restaurant
         .logo__container {
-            position: absolute; // Positionnement absolute pour positionner le logo
-            left: 50%; // Positionne le logo au milieu
-            top: 50%; // Positionne le logo au milieu
+            position: absolute;
+            left: 50%;
+            top: 50%;
             transform: translate(-50%, -50%);
             margin-top: 5px;
 
             img {
                 width: 100%;
                 height: 36px;
+                display: block;
             }
         }
     }
 }
 
-@mixin card-icon-pink {
-    $card-icon-pink-width: 1.375rem;
-    $card-icon-pink-height: 1.3125rem;
-    $card-icon-pink-color: #FF79DA;
-    $card-icon-pink-position-top: 2.5rem;
-    $card-icon-pink-position-right: 2.5625rem;
+// ⬇️ Mixin pour le positionnement du titre et icône dans l'entête
+@mixin header-title-and-icon-alignment {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1.0625rem; // 17px à gauche
+    padding-right: 1.0625rem; // 17px à droite
+}
 
+// ⬇️ Mixin pour cacher le checkbox dans la carte
+@mixin card-icon-pink {
     position: absolute;
     top: $card-icon-pink-position-top;
     right: $card-icon-pink-position-right;
@@ -85,36 +78,127 @@
     &:hover {
         transform: scale(1.1);
     }
+}
 
-    &::before {
-        content: '\f004';
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
+// ⬇️ Mixin pour la bannière du restaurant
+@mixin restaurant-banner($width: 100%, $height: auto, $img-height: 275px) {
+    position: relative;
+    width: $width;
+    height: $height;
+
+    .banner-img {
+        width: 100%;
+        height: $img-height;
+        object-fit: cover;
+        display: block;
     }
 }
 
-@mixin header-title-and-icon-alignment {
+// ⬇️ Mixin pour le container du menu
+@mixin menu-container($bg-color: $card-background,
+    $border-radius: 40px 40px 0 0,
+    $padding: 13px,
+    $gap: 40px,
+    $margin-top: -37px,
+    $z-index: 2) {
     position: relative;
+    background-color: $bg-color;
+    border-radius: $border-radius;
+    padding: $padding;
+    gap: $gap;
+    margin-top: $margin-top;
+    z-index: $z-index;
+
+    h1 {
+        font-family: $font-family-secondary;
+        font-style: italic;
+        font-weight: 400;
+    }
+}
+
+// ⬇️ Mixin pour la section du menu (menus Entrées, Plats, Desserts, etc.)
+@mixin menu-section($width: 349px, $gap: 10.5px, $padding: 12px, $margin-top: 54px) {
+    width: $width;
+    height: auto;
+    gap: $gap; // Espacement entre les plats
+    padding: $padding;
+    margin-top: $margin-top; // Espacement spécifique entre la section et le reste
+    display: flex;
+    flex-direction: column;
+}
+
+// ⬇️ Mixin pour les éléments du menu (les articles)
+@mixin menu-item($padding: 10px, $border-radius: 5px, $box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1), $margin-bottom: 10.5px) {
+    display: flex;
+    justify-content: space-between;
+    padding: $padding;
+    border-radius: $border-radius;
+    background-color: white;
+    box-shadow: $box-shadow;
+    margin-bottom: $margin-bottom;
+    align-items: center;
+}
+
+// ⬇️ Mixin pour le titre des éléments du menu
+@mixin menu-title($font-size: $font-size-medium, $font-weight: $font-weight-bold, $color: $primary-color) {
+    font-family: $font-family-primary;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+}
+
+// ⬇️ Mixin pour la description des éléments du menu
+@mixin menu-description($font-size: $font-size-small, $color: $secondary-color) {
+    font-family: $font-family-primary;
+    font-size: $font-size;
+    color: $color;
+    margin-top: 5px;
+}
+
+// ⬇️ Mixin pour le prix du menu (évite le retour à la ligne)
+@mixin menu-price-no-wrap($font-size: 1rem, $color: $button-hover-color) {
+    font-weight: bold;
+    font-size: $font-size;
+    margin-right: 13.5px; // Espacement à droite du prix
+    white-space: nowrap; // Empêche le texte de passer à la ligne
+}
+
+// ⬇️ Mixin pour cacher le checkbox et utiliser un icône
+@mixin menu-check($icon-size: 1.5rem, $color: $primary-color, $hover-color: $button-hover-color) {
+    margin-left: 10px;
+
+    .menu__check-input {
+        display: none; // Supprimer le checkbox (le rendre invisible)
+    }
+
+    .menu__check-icon {
+        font-size: $icon-size;
+        color: $color;
+
+        &:hover {
+            color: $hover-color; // Modifier la couleur au survol
+        }
+    }
+}
+
+// ⬇️ Mixin pour l'espacement entre `h3` et `p` des plats du menu
+@mixin item-text-spacing {
+    margin-left: 15px; // 15px à gauche du h3 et p
+}
+
+// ⬇️ Mixin pour le flexbox du menu avec le prix aligné à droite
+@mixin menu-item-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 20px;
-    padding-left: 1.0625rem;
-    /* 17px */
-    padding-right: 1.0625rem;
-    /* 17px */
 }
 
-.card__checkbox {
-    display: none;
-    /* Rendre visible le checkbox */
-}
-
-@mixin header-title-and-icon-alignment {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20px;
-    padding: 17px;
+// ⬇️ Mixin pour la taille et l'espacement du texte dans les éléments du menu (h3 et p)
+@mixin menu-text($width: 287px, $height: 42px, $gap: 5px) {
+    width: $width; // Largeur spécifique
+    height: $height; // Hauteur fixe
+    gap: $gap; // Espacement entre h3 et p
+    display: flex; // Utilisation du flexbox pour gérer l'espacement
+    flex-direction: column; // Les éléments sont empilés en colonne
+    justify-content: center; // Centrer le contenu verticalement
 }
