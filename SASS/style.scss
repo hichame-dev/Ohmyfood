@@ -25,11 +25,9 @@
 @use './pages/responsive';
 
 // 📌 **6. Pages Restaurants**
-@use './restaurants/mixins_personnalises'as *;
-@use './restaurants/a_la_francaise';
-@use './restaurants/la_note_enchante';
-@use './restaurants/la_palette_du_gout';
-@use './restaurants/le_delice_des_sens';
+
+@use './restaurants/restaurants';
+
 
 // 🌍 **7. Styles globaux supplémentaires**
 body {

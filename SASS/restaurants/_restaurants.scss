@@ -2,7 +2,7 @@
 @use '../abstracts/variables'as *; // Variables globales (couleurs, typographies, tailles)
 @use '../base/base'; // Styles généraux
 @use './mixins_personnalises'as *; // Mixins spécifiques aux restaurants
-@use '../restaurants/typo_custom'as *; // Typographies spécifiques aux restaurants
+
 
 @include header-style; // Appliquer le style du header
 
