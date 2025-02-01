@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch SASS/style.scss Assets/css/style.css"
-
-
+    "sass": "sass --watch SASS/style.scss css/style.css"
   },
   "keywords": [],
   "author": "",
@@ -16,4 +14,3 @@
     "sass": "^1.83.4"
   }
 }
-
