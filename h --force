@@ -1,0 +1,69 @@
+[33me09a9ac[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Retour au commit 0090a2f
+[33m0090a2f[m Correction des chemins SASS dans package.json et mise à jour des fichiers CSS, avec suppression de styles inutilisés et commentaires ajoutés dans style.scss et index.html pour une meilleure organisation.
+[33m73825df[m Merge branch 'main' of https://github.com/hichame-dev/Ohmyfood
+[33m06b7ced[m Mise à jour des chemins des fichiers SASS et suppression de fichiers CSS inutilisés pour une meilleure organisation
+[33mc8342d7[m Refactor les chemins des fichiers CSS et supprime les styles inutilisés pour une meilleure organisation
+[33m22287e3[m Suppression des fichiers CSS inutilisés et renommage de fichiers SASS pour une meilleure organisation
+[33mab39f63[m Ajout de nouveaux fichiers CSS et modifications des styles SASS pour améliorer la mise en page et l'apparence des composants, y compris les boutons, les cartes et les sections de restaurant.
+[33md09d768[m remise de json et css dans le dossier css
+[33m4e57669[m Merge branch 'main' of https://github.com/hichame-dev/Ohmyfood
+[33mea98dc0[m Sauvegarde des modifications
+[33m7a694fd[m Merge pull request #27 from hichame-dev/principal
+[33m370bc40[m Merge pull request #26 from hichame-dev/main
+[33m8b590b9[m[33m ([m[1;32mprincipal[m[33m)[m Sauvegarde avant passage sur main
+[33m906124a[m Merge pull request #25 from hichame-dev/principal
+[33md9d9cb2[m Merge pull request #24 from hichame-dev/main
+[33m9639b57[m Merge pull request #23 from hichame-dev/principal
+[33m32e3fc3[m Merge pull request #22 from hichame-dev/main
+[33m333c829[m Merge pull request #21 from hichame-dev/principal
+[33m74e68a0[m Merge pull request #20 from hichame-dev/main
+[33mb3d14a0[m Merge pull request #19 from hichame-dev/principal
+[33m6f970cc[m[33m ([m[1;31morigin/principal[m[33m)[m Merge pull request #18 from hichame-dev/main
+[33me17d226[m Merge pull request #17 from hichame-dev/principal
+[33mc09d0fd[m Merge pull request #15 from hichame-dev/main
+[33m359a118[m Merge pull request #14 from hichame-dev/gitbash
+[33me1c7456[m Merge branch 'main' into gitbash
+[33mab6a21d[m Mise az jour SASS + TITLE
+[33mdde078c[m Mise à jour des fichiers SCSS, ajout de nouvelles variables et suppression des anciens fichiers CSS
+[33m68f4e18[m Merge branch 'principal' of https://github.com/hichame-dev/Ohmyfood into principal
+[33m4d170e7[m Merge pull request #13 from hichame-dev/main
+[33m7514a52[m Merge pull request #13 from hichame-dev/main
+[33m01343df[m Merge pull request #12 from hichame-dev/principal
+[33ma6718a1[m Merge pull request #11 from hichame-dev/main
+[33mecd7629[m Merge branch 'principal' into main
+[33m8abe9a9[m Correction de l'erreur
+[33m6a5a91d[m Ignore node_modules and .vscode
+[33m0982972[m Merge branch 'principal' of https://github.com/hichame-dev/Ohmyfood into principal
+[33m1459815[m Initialisation du dépôt pour le projet Ohmyfood
+[33m2e17753[m header page annexe +creation dossier restaurant css+ link css
+[33m47c90a9[m Merge pull request #10 from hichame-dev/main
+[33m74a71df[m mise jour sauvegarde
+[33m89c7d3c[m controle des card et footer logo
+[33m0bb01d3[m Merge branch 'main' of github.com:hichame-dev/Ohmyfood
+[33m0eb707a[m suite de restaurant (prb de seconde card a regler )
+[33mf9bae0e[m Merge pull request #9 from hichame-dev/main
+[33m991f9b0[m Merge pull request #8 from hichame-dev/principal
+[33mfd89909[m debut restaurant grid
+[33m3188101[m media intro
+[33m7cec597[m Merge pull request #7 from hichame-dev/main
+[33m65924f3[m Mise à jour du README.md : ajout d'icônes de technologies et restructuration des sections
+[33m325c34e[m Merge pull request #6 from hichame-dev/main
+[33m088ff36[m debut de section 1 avec numbers
+[33mbcca0b2[m Merge pull request #5 from hichame-dev/main
+[33m916a020[m finalisation intro+restrucure sass dossier
+[33mfaa5c5f[m Merge pull request #4 from hichame-dev/main
+[33mecdbc32[m finalisation intro +creation de button
+[33m51883f8[m Merge branch 'main' of github.com:hichame-dev/Ohmyfood
+[33m9dc188c[m introduction resete variable +header
+[33m9668434[m Merge pull request #3 from hichame-dev/main
+[33m2c81f31[m Merge pull request #2 from hichame-dev/principal
+[33mfe966d0[m integration des variables et des imports
+[33m40fe9bd[m correction+integration des restaurants
+[33m5826cbe[m INCLUSION ET CORRECTION DES LIEN ORDRE Des IMAGEs + VERIF DE INDEX OK
+[33m2813e77[m Merge pull request #1 from hichame-dev/main
+[33m3d1e299[m reglage compiulation dossier sass en use
+[33m71c4dfb[m mise au point new
+[33m045a6fc[m INTEGRATION DU READ ME
+[33mb04c895[m Ajout du fichier .gitignore
+[33m93f17e3[m Ajout du fichier README.md
+[33m4990840[m Initial commit
