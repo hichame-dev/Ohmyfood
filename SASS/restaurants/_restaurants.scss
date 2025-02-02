@@ -1,0 +1,48 @@
+
+@use '../abstracts/variables'as *; // Variables globales (couleurs, typographies, tailles)
+@use '../base/base'; // Styles généraux
+@use'../abstracts/mixins'as *; // Mixins pour les styles réutilisables
+
+
+
+@include header-style; // Appliquer le style du header
+
+html {
+    margin: 0;
+}
+
+// Header de restaurant
+.restaurant-header {
+    @include header-title-and-icon-alignment; // Appliquer le mixin pour aligner le titre et l'icône
+}
+
+// Bannière du restaurant
+.restaurant-banner {
+    @include restaurant-banner; // Appliquer le mixin de la bannière
+}
+
+// Menu container
+.menu-container {
+    @include menu-container; // Appliquer le mixin pour le menu container
+}
+
+// Section du menu avec un espacement de 42px sous le titre
+.menu__section {
+    width: 349px;
+    height: auto;
+    gap: 12px;
+    padding: 12px; // Appliquer un padding autour de la section
+    margin-top: 42px; // Ajouter un espace de 42px sous le titre
+    display: flex;
+    flex-direction: column;
+    background-color: $card-background; // Utiliser la couleur définie dans la variable (à remplacer si nécessaire)
+}
+
+// Titre du menu (h2)
+.menu__title {
+    font-family: $font-family-primary; // Utiliser la police définie dans les variables
+    font-size: $font-size-medium; // Ajuster la taille de la police
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+    margin-top: 0; // Ajuster si nécessaire
+}
