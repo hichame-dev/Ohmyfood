@@ -17,12 +17,42 @@ input {
   font-family: inherit;
 }
 
+.restaurant-title {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.75rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 2.55rem;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+
+.menu__section h2 {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
 h2 {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: #000000;
   margin-top: 54px;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.32rem;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
 
 .card__title {
@@ -46,13 +76,13 @@ ol {
   list-style: none;
 }
 
-.restaurant-title {
-  font-family: "Shrikhand", sans-serif;
-  font-size: 1.75rem;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 2.55rem;
+.step__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.063rem;
+  font-weight: 500;
+  line-height: 1.245rem;
   text-align: left;
+  color: #000000;
   text-underline-position: from-font;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
@@ -74,6 +104,23 @@ ol {
   text-underline-position: from-font;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+}
+
+.price {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.94rem;
+  font-weight: 700;
+  line-height: 1.1rem;
+  text-align: center;
+}
+
+.euro {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.94rem;
+  font-weight: 700;
+  line-height: 1.1rem;
+  text-align: center;
+  color: #FFFFFF;
 }
 
 body {
@@ -144,19 +191,98 @@ main {
 }
 .header__location .location__text {
   font-family: "Roboto", sans-serif;
-  font-size: 1.0625rem;
+  font-size: 1.063rem;
   font-weight: 500;
   text-align: left;
   white-space: nowrap;
 }
 
-.restaurant-header {
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  height: 63px;
+  background-color: #F6F6F6;
   position: relative;
+}
+.header .direction__icon {
+  position: absolute;
+  top: 17px;
+  left: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 30px;
+  height: 30px;
+  color: #353535;
+}
+.header .direction__icon a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.header .direction__icon a i {
+  font-size: 16px;
+  color: #353535;
+}
+.header .logo__container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 5px;
+}
+.header .logo__container img {
+  width: auto;
+  height: 36px;
+  display: block;
+}
+
+.restaurant-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 1.0625rem;
   padding-right: 1.0625rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+.restaurant-header .restaurant-title {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.75rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 2.55rem;
+  text-align: left;
+  width: 21.3125rem;
+  color: #000000;
+}
+.restaurant-header .card__icon-pink {
+  width: 1.375rem;
+  height: 1.3125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.restaurant-header .card__icon-pink:hover {
+  transform: scale(1.1);
+}
+.restaurant-header .card__icon-pink input {
+  display: none;
+}
+.restaurant-header .card__icon-pink .card__icon {
+  font-size: 1.375rem;
+  color: #000000;
 }
 
 .restaurant-banner {
@@ -176,7 +302,6 @@ main {
   position: relative;
   background-color: #F6F6F6;
   border-radius: 2.5rem 2.5rem 0 0;
-  padding: 0.8125rem;
   gap: 2.5rem;
   margin-top: -2.3125rem;
   z-index: 2;
@@ -186,6 +311,54 @@ main {
   font-family: "Shrikhand", sans-serif;
   font-style: italic;
   font-weight: 400;
+}
+
+/* ✅ Style général du bouton cœur */
+.card__icon-pink {
+  width: 1.375rem;
+  height: 1.3125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  /* ✅ Effet de zoom au survol */
+  /* ✅ Cache l'input */
+  /* ✅ Icône du cœur vide (par défaut) */
+  /* ✅ Icône du cœur plein (cachée par défaut) */
+  /* ✅ Quand on coche, le cœur plein apparaît et le cœur vide disparaît */
+}
+.card__icon-pink:hover {
+  transform: scale(1.1);
+}
+.card__icon-pink .card__checkbox {
+  display: none;
+}
+.card__icon-pink .card__icon--empty {
+  font-size: 1.375rem;
+  /* 22px */
+  color: #000000;
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+}
+.card__icon-pink .card__icon--full {
+  font-size: 1.375rem;
+  /* 22px */
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* ✅ Permet d'afficher le dégradé */
+  position: absolute;
+  opacity: 0;
+  /* Caché par défaut */
+  transition: opacity 0.3s ease-in-out;
+}
+.card__icon-pink .card__checkbox:checked ~ .card__icon--empty {
+  opacity: 0;
+}
+.card__icon-pink .card__checkbox:checked ~ .card__icon--full {
+  opacity: 1;
 }
 
 .footer {
@@ -319,14 +492,15 @@ main {
   text-decoration: none;
   cursor: pointer;
   padding: 13px 1rem;
-  transition: background 0.3s, box-shadow 0.3s;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
   width: 13.625rem;
   height: 3.125rem;
+  margin-bottom: 57px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 0px;
+  gap: 0;
 }
 .btn:hover {
   background-color: #FF79DA;
@@ -425,7 +599,7 @@ main {
 }
 .restaurants .card__location {
   font-family: "Roboto", sans-serif;
-  font-size: 1.0625rem;
+  font-size: 1.063rem;
   font-weight: 300;
   line-height: 1.245rem;
   color: #000000;
@@ -441,7 +615,7 @@ main {
   align-self: start;
 }
 .restaurants .card__icon-pink:hover .card__icon {
-  color: #FF79DA;
+  color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 .restaurants .card--new .card__tag {
   position: absolute;
@@ -510,10 +684,360 @@ main {
   color: #7E7E7E;
 }
 .steps .step .step__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.063rem;
+  font-weight: 500;
   margin-left: 1.25rem;
   justify-self: center;
 }
 
 .step__icon__store {
   color: #9356DC;
+}
+
+/* Keyframes pour le volet (inchangé) */
+@keyframes slideIn {
+  0% {
+    width: 0;
+    /* IMPORTANT : Commence caché ! */
+  }
+  100% {
+    width: 59px;
+    /* Termine visible */
+  }
+}
+/* Keyframes pour la rotation du cercle (inchangé) */
+@keyframes rotateCheck {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Nouvelle Keyframes pour déplacer le PRIX à gauche (inchangé) */
+@keyframes slidePriceLeft {
+  0% {
+    transform: translateX(0);
+    /* Le prix ne bouge pas au début */
+  }
+  100% {
+    transform: translateX(-59px);
+    /* Pousse le prix de 59px à gauche */
+  }
+}
+.menu__item {
+  position: relative;
+  overflow: hidden;
+  /* Cache les éléments qui dépassent */
+}
+
+.menu__check {
+  width: 0;
+  /* Caché par défaut */
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  transition: width 0.3s ease-out;
+}
+
+/* ANIMATION DU CHECK */
+.menu__check-input:checked + .menu__check {
+  animation: slideIn 0.3s ease-out forwards;
+  /* Garde la largeur après animation */
+}
+
+/* ANIMATION DU PRIX */
+/* ✅ Déplace le prix et le garde à gauche */
+.menu__check-input:checked + .menu__check + .menu__content .menu__price {
+  animation: slidePriceLeft 0.3s ease-out forwards;
+  transform: translateX(-59px);
+  /* Reste fixe */
+}
+
+/* ANIMATION DU CHECKMARK */
+/* ✅ Fixe l’animation du check après activation */
+.menu__check-input:checked + .menu__check {
+  animation: slideIn 0.3s ease-out forwards;
+  width: 59px;
+  /* Reste ouvert après animation */
+}
+
+/* ✅ Fixe l’opacité du checkmark après animation */
+.menu__check-input:checked + .menu__check .fa-check {
+  opacity: 1;
+  transition: opacity 0.3s ease-out 0.3s;
+}
+
+/* 🔴 SUPPRESSION DU :hover SUR CES ÉLÉMENTS 🔴 */
+.menu__item:hover .menu__check,
+.menu__item:hover .menu__price,
+.menu__item:hover .menu__check .fa-check,
+.menu__item:hover .menu__check-circle {
+  animation: none;
+  /* Désactive l'effet de réinitialisation au hover */
+}
+
+.menu__check-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #99E2D0;
+  /* Couleur du cercle (peut-être pas utilisée directement pour le check) */
+  transition: transform 0.5s ease;
+  opacity: 0;
+  /* Commence caché (c'est correct) */
+}
+
+.menu__check .fa-check {
+  font-size: 12px;
+  opacity: 0;
+  /* Commence caché (c'est correct) */
+  color: #99E2D0;
+  /* **CORRECTION IMPORTANTE : Couleur du checkmark : VERT (#99E2D0)** */
+}
+
+.menu__item:hover .menu__content {
+  border-right: 5px solid #99E2D0;
+  /* Bordure verte au survol (inchangé) */
+  z-index: 2;
+  /* Assure que la bordure est au-dessus du check (inchangé) */
+  /* Pas de translation ici pour .menu__content global */
+}
+
+.menu__item:hover {
+  transform: translateX(-5px);
+  /* Léger décalage de l'item entier au survol (inchangé) */
+}
+
+.menu__check-input {
+  display: none;
+}
+
+.menu__item:hover .menu__check,
+.menu__check-input:checked + .menu__check {
+  animation: slideIn 0.3s ease-out forwards;
+  /* Animation du volet (inchangé) */
+}
+
+.menu__item:hover .menu__price,
+.menu__check-input:checked + .menu__check + .menu__content .menu__price {
+  animation: slidePriceLeft 0.3s ease-out forwards;
+  /* Animation du PRIX */
+}
+
+/* **AJOUT IMPORTANT : Animation pour l'opacité du checkmark** */
+.menu__item:hover .menu__check .fa-check,
+.menu__check-input:checked + .menu__check .fa-check {
+  opacity: 1;
+  /* **FAIT APPARAÎTRE le checkmark en changeant son opacité à 1** */
+  transition: opacity 0.3s ease-out 0.3s;
+  /* Animation d'opacité (décalée pour synchro) */
+}
+
+.menu__item:hover .menu__check-circle,
+.menu__check-input:checked + .menu__check .menu__check-circle {
+  animation: rotateCheck 0.5s ease forwards;
+  /* Animation du cercle (inchangé) */
+  opacity: 1;
+  /* S'assurer que le cercle est bien visible aussi */
+}
+
+/* Animation du cœur au clic */
+.card__checkbox:checked + .card__icon {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.card__checkbox:not(:checked) + .card__icon {
+  transform: scale(1);
+}
+
+.menu__section h2 {
+  margin: 0;
+  position: relative;
+  margin-bottom: 2.625rem;
+}
+.menu__section h2::after {
+  content: "";
+  width: 50%;
+  width: 2.5rem;
+  border-top: 3px solid #99E2D0;
+  position: relative;
+  left: 0;
+  top: 5px;
+  display: block;
+}
+
+.menu__section {
+  margin-top: 2.625rem;
+  padding: 13px;
+}
+.menu__section h2 {
+  position: relative;
+  margin-bottom: 1.5625rem;
+  padding-left: 1.0625rem;
+}
+
+.menu__item {
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 15px;
+  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  /* Ajout du gap entre les boîtes */
+}
+
+.menu__item:last-child {
+  margin-bottom: 0;
+  /* Supprime la marge du dernier élément */
+}
+
+.menu__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.menu__text {
+  width: 287px;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.menu__title {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.09px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  margin: 0;
+}
+
+.menu__description {
+  font-family: Roboto, sans-serif;
+  font-size: 15.04px;
+  font-weight: 300;
+  line-height: 17.63px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  width: 100%;
+  margin: 0;
+}
+
+.menu__price {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 15px;
+  box-sizing: border-box;
+  align-self: flex-end;
+}
+
+.order {
+  /* Hauteur fixe de 187px pour laisser un espace défini entre le menu et le footer */
+  height: 187px;
+  /* On centre le bouton horizontalement et verticalement */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--order {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  border-radius: 25px;
+  box-shadow: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.25);
+  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 13px 1rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  /* Taille du bouton */
+  width: 186px;
+  height: 50px;
+  /* Au survol, on utilise un autre gradient + une ombre différente */
+}
+.btn--order:hover {
+  /* Définis un gradient "un peu plus clair" à la main */
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  /* Ombre plus marquée */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* ✅ Style du cœur */
+.card__icon-pink {
+  width: 1.375rem;
+  /* 22px */
+  height: 1.3125rem;
+  /* 21px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  /* ✅ Effet au survol */
+  /* ✅ Cache la checkbox */
+  /* ✅ Cœur vide par défaut */
+  /* ✅ Quand la checkbox est cochée, on change l’icône en cœur plein */
+}
+.card__icon-pink:hover {
+  transform: scale(1.1);
+}
+.card__icon-pink .card__checkbox {
+  display: none;
+}
+.card__icon-pink .card__icon {
+  font-size: 1.375rem;
+  /* 22px */
+  color: #000000;
+  transition: color 0.3s ease-in-out;
+}
+.card__icon-pink .card__checkbox:checked + .card__icon {
+  color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  /* Rose pour le cœur plein */
+  font-weight: 900;
+  /* Passe en fa-solid */
+  font-family: "Font Awesome 6 Free";
+  /* Assure la compatibilité */
+  content: "\f004";
+  /* Unicode du cœur plein */
 }/*# sourceMappingURL=style.css.map */
