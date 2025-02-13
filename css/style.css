@@ -738,6 +738,8 @@ main {
 .menu__check-icon {
   color: #99E2D0;
   font-size: 12px;
+  transition: transform 0.5s ease-out;
+  /* Ajout de la transition pour la rotation */
 }
 
 /* Cache la checkbox par défaut */
@@ -760,8 +762,6 @@ main {
 
 /*Ajout de la rotation de l'icone*/
 .menu__check-input:checked + .menu__check .menu__check-circle .menu__check-icon {
-  transition: transform 0.5s ease-out;
-  /* Ajoute la transition pour l'icone */
   transform: rotate(360deg);
 }
 

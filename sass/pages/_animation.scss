@@ -42,6 +42,8 @@
 .menu__check-icon {
     color: #99E2D0;
     font-size: 12px;
+    transition: transform 0.5s ease-out;
+    /* Ajout de la transition pour la rotation */
 }
 
 /* Cache la checkbox par défaut */
@@ -50,11 +52,13 @@
 }
 
 /* Styles quand la checkbox est cochée */
-.menu__check-input:checked~.menu__content .menu__price {
-    transform: translateX(-59px);
-    /* Décale le prix vers la gauche */
-    transition: transform 0.5s ease-out;
-    /* Ajoute la transition pour le prix */
+.menu__check-input:checked~.menu__content {
+    .menu__price {
+        transform: translateX(-59px);
+        /* Décale le prix vers la gauche */
+        transition: transform 0.5s ease-out;
+        /* Ajoute la transition pour le prix */
+    }
 }
 
 .menu__check-input:checked+.menu__check {
@@ -64,8 +68,6 @@
 
 /*Ajout de la rotation de l'icone*/
 .menu__check-input:checked+.menu__check .menu__check-circle .menu__check-icon {
-    transition: transform 0.5s ease-out;
-    /* Ajoute la transition pour l'icone */
     transform: rotate(360deg);
 }
 
