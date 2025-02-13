@@ -1,102 +1,34 @@
+// menu-animation.scss (ou menu-animation.css)
 
-/* Keyframes pour le volet (inchangé) */
-@keyframes slideIn {
-    0% {
-        width: 0;
-        /* IMPORTANT : Commence caché ! */
-    }
-
-    100% {
-        width: 59px;
-        /* Termine visible */
-    }
-}
-
-/* Keyframes pour la rotation du cercle (inchangé) */
-@keyframes rotateCheck {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* Nouvelle Keyframes pour déplacer le PRIX à gauche (inchangé) */
-@keyframes slidePriceLeft {
-    0% {
-        transform: translateX(0);
-        /* Le prix ne bouge pas au début */
-    }
-
-    100% {
-        transform: translateX(-59px);
-        /* Pousse le prix de 59px à gauche */
-    }
-}
 .menu__item {
     position: relative;
+    /*  AJOUTÉ : Pour le positionnement absolu de .menu__check */
     overflow: hidden;
-    /* Cache les éléments qui dépassent */
+    /*  AJOUTÉ : Pour masquer le .menu__check au début */
 }
 
+/* Styles pour le .menu__check (volet vert) */
 .menu__check {
-    width: 0;
-    /* Caché par défaut */
-    height: 100%;
     position: absolute;
     top: 0;
     right: 0;
+    width: 59px;
+    height: 100%;
     background-color: #99E2D0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    z-index: 1;
-    transition: width 0.3s ease-out;
+    transform: translateX(100%);
+    /* Initialement caché à droite */
+    transition: transform 0.5s ease-out;
+    /* Transition pour l'apparition */
+    z-index: 3;
+    /*Pour qu'il reste visible*/
 }
 
-/* ANIMATION DU CHECK */
-.menu__check-input:checked+.menu__check {
-    animation: slideIn 0.3s ease-out forwards;
-    /* Garde la largeur après animation */
-}
-
-/* ANIMATION DU PRIX */
-/* ✅ Déplace le prix et le garde à gauche */
-.menu__check-input:checked+.menu__check+.menu__content .menu__price {
-    animation: slidePriceLeft 0.3s ease-out forwards;
-    transform: translateX(-59px);
-    /* Reste fixe */
-}
-
-/* ANIMATION DU CHECKMARK */
-/* ✅ Fixe l’animation du check après activation */
-.menu__check-input:checked+.menu__check {
-    animation: slideIn 0.3s ease-out forwards;
-    width: 59px;
-    /* Reste ouvert après animation */
-}
-
-/* ✅ Fixe l’opacité du checkmark après animation */
-.menu__check-input:checked+.menu__check .fa-check {
-    opacity: 1;
-    transition: opacity 0.3s ease-out 0.3s;
-}
-
-/* 🔴 SUPPRESSION DU :hover SUR CES ÉLÉMENTS 🔴 */
-.menu__item:hover .menu__check,
-.menu__item:hover .menu__price,
-.menu__item:hover .menu__check .fa-check,
-.menu__item:hover .menu__check-circle {
-    animation: none;
-    /* Désactive l'effet de réinitialisation au hover */
-}
-
-
+/* Styles pour le cercle et la coche (à l'intérieur de .menu__check) */
 .menu__check-circle {
     width: 20px;
     height: 20px;
@@ -105,72 +37,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #99E2D0;
-    /* Couleur du cercle (peut-être pas utilisée directement pour le check) */
-    transition: transform 0.5s ease;
-    opacity: 0;
-    /* Commence caché (c'est correct) */
 }
 
-.menu__check .fa-check {
+.menu__check-icon {
+    color: #99E2D0;
     font-size: 12px;
-    opacity: 0;
-    /* Commence caché (c'est correct) */
-    color: #99E2D0;
-    /* **CORRECTION IMPORTANTE : Couleur du checkmark : VERT (#99E2D0)** */
 }
 
-.menu__item:hover .menu__content {
-    border-right: 5px solid #99E2D0;
-    /* Bordure verte au survol (inchangé) */
-    z-index: 2;
-    /* Assure que la bordure est au-dessus du check (inchangé) */
-    /* Pas de translation ici pour .menu__content global */
-}
-
-.menu__item:hover {
-    transform: translateX(-5px);
-    /* Léger décalage de l'item entier au survol (inchangé) */
-}
-
+/* Cache la checkbox par défaut */
 .menu__check-input {
     display: none;
 }
 
-.menu__item:hover .menu__check,
+/* Styles quand la checkbox est cochée */
+.menu__check-input:checked~.menu__content .menu__price {
+    transform: translateX(-59px);
+    /* Décale le prix vers la gauche */
+    transition: transform 0.5s ease-out;
+    /* Ajoute la transition pour le prix */
+}
+
 .menu__check-input:checked+.menu__check {
-    animation: slideIn 0.3s ease-out forwards;
-    /* Animation du volet (inchangé) */
+    transform: translateX(0);
+    /* Fait apparaître le volet vert */
 }
 
-.menu__item:hover .menu__price,
-/* Applique slidePriceLeft au PRIX au survol */
-.menu__check-input:checked+.menu__check+.menu__content .menu__price
-
-/* Applique slidePriceLeft au PRIX quand coché */
-    {
-    animation: slidePriceLeft 0.3s ease-out forwards;
-    /* Animation du PRIX */
+/*Ajout de la rotation de l'icone*/
+.menu__check-input:checked+.menu__check .menu__check-circle .menu__check-icon {
+    transition: transform 0.5s ease-out;
+    /* Ajoute la transition pour l'icone */
+    transform: rotate(360deg);
 }
-
-/* **AJOUT IMPORTANT : Animation pour l'opacité du checkmark** */
-.menu__item:hover .menu__check .fa-check,
-.menu__check-input:checked+.menu__check .fa-check {
-    opacity: 1;
-    /* **FAIT APPARAÎTRE le checkmark en changeant son opacité à 1** */
-    transition: opacity 0.3s ease-out 0.3s;
-    /* Animation d'opacité (décalée pour synchro) */
-}
-
-
-.menu__item:hover .menu__check-circle,
-.menu__check-input:checked+.menu__check .menu__check-circle {
-    animation: rotateCheck 0.5s ease forwards;
-    /* Animation du cercle (inchangé) */
-    opacity: 1;
-    /* S'assurer que le cercle est bien visible aussi */
-}
-
 
 // coeur
 
@@ -182,5 +79,83 @@
 
 .card__checkbox:not(:checked)+.card__icon {
     transform: scale(1);
+}
+
+/* ✅ Conteneur du loader (plein écran au chargement) */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+    animation: fadeOut 1s ease-out 3s forwards;
+    /* Disparaît après 3s */
+}
+
+/* ✅ Loader animé (cercle tournant) */
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid transparent;
+    border-top: 6px solid #9356DC;
+    /* Violet */
+    border-right: 6px solid #FF79DA;
+    /* Rose */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* ✅ Texte animé sous le loader */
+.loader-text {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-family: "Shrikhand", sans-serif;
+    color: black;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* ✅ Animation de rotation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ✅ Animation du texte (effet battement) */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* ✅ Animation pour faire disparaître le loader après 3s */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
