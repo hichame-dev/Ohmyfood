@@ -1,3 +1,6 @@
+@import "../base/variables";
+@import "../base/mixins";
+
 .header {
     width: 100%;
     height: $header-height;

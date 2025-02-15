@@ -1,0 +1,276 @@
+@import "../base/variables";
+@import "../components/card"; // Si les cartes sont utilisées
+@import "../animation/animation"; // Si des animations sont utilisées
+
+.menu__section {
+    margin-top: 42px;
+    /* 2.625rem */
+    padding: 13px;
+
+    h2 {
+        margin: 0 0 42px 0;
+        /* ou 2.625rem en bas */
+        position: relative;
+        font-family: Roboto, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 18.75px;
+        letter-spacing: 0;
+
+        &::after {
+            content: "";
+            width: 40px;
+            /* largeur de la petite ligne */
+            border-top: 3px solid #99E2D0;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            margin-top: 10px;
+            /* l'espace entre le texte et la ligne */
+            display: block;
+        }
+    }
+}
+
+/* ================================
+   3) UN ITEM DE MENU : .menu__item
+================================ */
+.menu__item {
+    position: relative;
+    width: 100%;
+    min-height: 69px;
+    margin-bottom: 12px;
+    padding: 12px 0;
+    border-radius: 15px;
+    box-shadow: 0px 4.01px 15.04px rgba(0, 0, 0, 0.1);
+    display: flex;
+    /* Séparation horizontale : texte et barre verte */
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* Pour masquer la barre quand elle sort du cadre */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Au survol, petit effet visuel */
+    &:hover {
+        background-color: #f2f2f2;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* ================================
+   4) LE CONTENU (texte + prix)
+================================ */
+.menu__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-right: 15px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* Le bloc texte (titre + description) */
+.menu__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+    padding-left: 15px;
+    width: 287px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    /* Permet le text-overflow si la fenêtre est étroite */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* Titre / Description */
+.menu__title {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu__description {
+    font-family: Roboto, sans-serif;
+    font-size: 15.04px;
+    font-weight: 300;
+    line-height: 17.63px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Le prix, qu'on peut pousser à gauche en anim */
+.menu__price {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: auto;
+    white-space: nowrap;
+    transition: transform 0.5s ease-out;
+}
+
+/* ================================
+   5) LA BARRE VERTE : .menu__check
+================================ */
+.menu__check {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 59px;
+    height: 100%;
+    background-color: #99E2D0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    /* cachée hors du cadre */
+    transition: transform 0.5s ease-out;
+    z-index: 3;
+    overflow: hidden;
+
+    /* Le cercle blanc */
+    .menu__check-circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* L'icône check */
+    .menu__check-icon {
+        color: #99E2D0;
+        font-size: 12px;
+        opacity: 0;
+        /* on fera un fadeIn via keyframes, ou un simple transition */
+    }
+}
+
+/* ================================
+   6) CHECKBOX (caché) : déclencheur
+================================ */
+.menu__check-input {
+    display: none;
+}
+
+/* ================================
+   7) AU CLIC (checkbox :checked)
+      => la barre verte glisse,
+         le prix recule,
+         l’icône fadeIn + spin
+================================ */
+.menu__check-input:checked~.menu__content .menu__price {
+    transform: translateX(-59px);
+}
+
+.menu__check-input:checked+.menu__check {
+    transform: translateX(0);
+    animation: fadeIn 0.3s forwards;
+    /* Barre verte fade + slide */
+}
+
+/* L'icône check : fadeIn + spin (0.5s) */
+.menu__check-input:checked+.menu__check .menu__check-circle .menu__check-icon {
+    animation: fadeIn 0.3s forwards, spin 0.5s ease-out forwards;
+    opacity: 1;
+}
+
+
+
+
+
+.order {
+    /* Hauteur fixe de 187px pour laisser un espace défini entre le menu et le footer */
+    height: 187px;
+
+    /* On centre le bouton horizontalement et verticalement */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn--order {
+    @include button-style();
+
+    /* Taille du bouton */
+    width: 186px;
+    height: 50px;
+
+    /* Au survol, on utilise un autre gradient + une ombre différente */
+    &:hover {
+        /* Définis un gradient "un peu plus clair" à la main */
+        background: $color-gradient;
+        /* Ombre plus marquée */
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+    }
+}
+
+/* ✅ Style du cœur */
+.card__icon-pink {
+    width: 1.375rem;
+    /* 22px */
+    height: 1.3125rem;
+    /* 21px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    /* ✅ Effet au survol */
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    /* ✅ Cache la checkbox */
+    .card__checkbox {
+        display: none;
+    }
+
+    /* ✅ Cœur vide par défaut */
+    .card__icon {
+        font-size: 1.375rem;
+        /* 22px */
+        color: $color-primary;
+        transition: color 0.3s ease-in-out;
+    }
+
+    /* ✅ Quand la checkbox est cochée, on change l’icône en cœur plein */
+    .card__checkbox:checked+.card__icon {
+        color:$color-gradient;
+        /* Rose pour le cœur plein */
+        font-weight: 900;
+        /* Passe en fa-solid */
+        font-family: "Font Awesome 6 Free";
+        /* Assure la compatibilité */
+        content: "\f004";
+        /* Unicode du cœur plein */
+    }
+}

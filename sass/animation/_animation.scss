@@ -1,0 +1,94 @@
+@import "../base/variables";
+
+
+
+// coeur
+
+/* Animation du cœur au clic */
+.card__checkbox:checked+.card__icon {
+    transform: scale(1.2); // Effet zoom
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.card__checkbox:not(:checked)+.card__icon {
+    transform: scale(1);
+}
+
+/* ✅ Conteneur du loader (plein écran au chargement) */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+    animation: fadeOut 1s ease-out 3s forwards;
+    /* Disparaît après 3s */
+}
+
+/* ✅ Loader animé (cercle tournant) */
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid transparent;
+    border-top: 6px solid #9356DC;
+    /* Violet */
+    border-right: 6px solid #FF79DA;
+    /* Rose */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* ✅ Texte animé sous le loader */
+.loader-text {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-family: "Shrikhand", sans-serif;
+    color: black;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* ✅ Animation de rotation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ✅ Animation du texte (effet battement) */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* ✅ Animation pour faire disparaître le loader après 3s */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
