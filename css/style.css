@@ -773,195 +773,6 @@ main {
   font-size: 0.875rem;
 }
 
-.steps {
-  width: 100%;
-  margin-top: 3rem;
-  padding: 0 1.25rem;
-  background-color: #FFFFFF;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-}
-.steps__title {
-  margin-bottom: 1.625rem;
-}
-.steps__list {
-  display: grid;
-  width: 100%;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(323px, 330px));
-}
-.steps .step {
-  width: 100%;
-  min-height: 72px;
-  background-color: #F6F6F6;
-  border-radius: 1.25rem;
-  box-shadow: 0px 0.25rem 0.9375rem rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 0px;
-  flex-wrap: nowrap;
-  /* Empêche le passage à la ligne */
-}
-.steps .step .step__number {
-  position: absolute;
-  left: 10px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: #9356DC;
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-right: 24px;
-}
-.steps .step .step__icon {
-  width: 0.81375rem;
-  height: 1.24375rem;
-  color: #7E7E7E;
-}
-.steps .step .step__text {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.063rem;
-  font-weight: 500;
-  margin-left: 1.25rem;
-  justify-self: center;
-}
-
-.step__icon__store {
-  color: #9356DC;
-}
-
-/* Keyframes pour l'animation simple de fondu */
-@keyframes simpleFade {
-  0% {
-    opacity: 0.5;
-  }
-  /* Début légèrement transparent */
-  100% {
-    opacity: 1;
-  }
-  /* Fondu vers complètement opaque */
-}
-.menu__item {
-  position: relative;
-  overflow: hidden;
-  /* Cache les éléments qui dépassent */
-}
-
-.menu__check {
-  width: 0;
-  /* Caché par défaut */
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #99E2D0;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  z-index: 1;
-  transition: width 0.3s ease-out;
-}
-
-.menu__check-circle {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #99E2D0;
-  opacity: 0;
-  /* Commence caché */
-}
-
-.menu__check .fa-check {
-  font-size: 12px;
-  opacity: 0;
-  /* Commence caché */
-  color: #99E2D0;
-}
-
-.menu__check-input {
-  display: none;
-  /* Cache l'input checkbox */
-}
-
-/* EFFETS AU HOVER (menu__item:hover) - **PLACÉ AVANT LES STYLES :checked** */
-.menu__item:hover .menu__content {
-  border-right: 5px solid #99E2D0;
-  /* Bordure verte à droite */
-  z-index: 2;
-  /* Assure que la bordure est au-dessus du check */
-}
-
-.menu__item:hover {
-  transform: translateX(-5px);
-  /* Léger décalage vers la gauche de l'item */
-}
-
-.menu__item:hover .menu__check {
-  animation: simpleFade 0.3s ease-out forwards;
-  /* Animation simple au hover */
-  width: 59px;
-  /* Assurer que width est bien à 59px au hover */
-}
-
-.menu__item:hover .menu__content .menu__price {
-  /* Cible spécifiquement le prix dans menu__content */
-  animation: simpleFade 0.3s ease-out forwards;
-  /* Animation simple au hover */
-  transform: translateX(-59px);
-  /* Assurer que translateX est bien à -59px au hover */
-}
-
-.menu__item:hover .menu__check .fa-check,
-.menu__item:hover .menu__check .menu__check-circle {
-  opacity: 1;
-  /* Affiche checkmark et cercle au hover */
-}
-
-/* ANIMATIONS AU CHECK (input:checked) - **PLACÉ APRÈS LES STYLES :hover POUR PRIORITÉ** */
-.menu__item .menu__check-input:checked + .menu__check {
-  animation: simpleFade 0.3s ease-out forwards;
-  /* Animation simple au CHECK */
-  width: 59px !important;
-  /* Force la largeur à 59px après l'animation */
-}
-
-.menu__item .menu__check-input:checked + .menu__check + .menu__content .menu__price {
-  animation: simpleFade 0.3s ease-out forwards;
-  /* Animation simple au CHECK */
-  transform: translateX(-59px) !important;
-  /* Force la position du prix */
-}
-
-.menu__item .menu__check-input:checked + .menu__check .fa-check {
-  opacity: 1 !important;
-  /* Affiche le checkmark */
-  transition: opacity 0.3s ease-out 0.3s;
-}
-
-.menu__item .menu__check-input:checked + .menu__check .menu__check-circle {
-  animation: simpleFade 0.5s ease forwards;
-  /* Animation simple au CHECK */
-  opacity: 1 !important;
-  /* Affiche le cercle */
-}
-
 /* Animation du cœur au clic */
 .card__checkbox:checked + .card__icon {
   transform: scale(1.2);
@@ -1048,9 +859,14 @@ main {
   padding: 13px;
 }
 .menu__section h2 {
-  margin: 0;
+  margin: 0 0 42px 0;
+  /* ou 2.625rem en bas */
   position: relative;
-  margin-bottom: 2.625rem;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18.75px;
+  letter-spacing: 0;
 }
 .menu__section h2::after {
   content: "";
@@ -1065,16 +881,9 @@ main {
   display: block;
 }
 
-.menu__section {
-  margin-top: 2.625rem;
-  padding: 13px;
-}
-.menu__section h2 {
-  position: relative;
-  margin-bottom: 1.5625rem;
-  padding-left: 1.0625rem;
-}
-
+/* ================================
+   3) UN ITEM DE MENU : .menu__item
+================================ */
 .menu__item {
   position: relative;
   width: 100%;
@@ -1082,14 +891,17 @@ main {
   margin-bottom: 12px;
   padding: 12px 0;
   border-radius: 15px;
-  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
+  box-shadow: 0px 4.01px 15.04px rgba(0, 0, 0, 0.1);
   display: flex;
   /* Séparation horizontale : texte et barre verte */
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  margin-bottom: 12px;
-  /* Ajout du gap entre les boîtes */
+  overflow: hidden;
+  /* Pour masquer la barre quand elle sort du cadre */
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  /* Au survol, petit effet visuel */
 }
 .menu__item:last-child {
   margin-bottom: 0;
@@ -1109,7 +921,6 @@ main {
   align-items: center;
   width: 100%;
   padding-right: 15px;
-  /* Important : Laisse de l'espace pour le .menu__check */
   box-sizing: border-box;
   position: relative;
   z-index: 2;
@@ -1118,8 +929,6 @@ main {
 
 /* Le bloc texte (titre + description) */
 .menu__text {
-  width: 287px;
-  gap: 5px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1127,6 +936,13 @@ main {
   padding-left: 15px;
   width: 287px;
   box-sizing: border-box;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 0;
+  /* Permet le text-overflow si la fenêtre est étroite */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 /* Titre / Description */
@@ -1136,6 +952,9 @@ main {
   font-weight: 500;
   line-height: 21px;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu__description {
@@ -1144,6 +963,9 @@ main {
   font-weight: 300;
   line-height: 17.63px;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Le prix, qu'on peut pousser à gauche en anim */
@@ -1151,9 +973,77 @@ main {
   font-family: Roboto, sans-serif;
   font-size: 16px;
   font-weight: 500;
-  margin-right: 15px;
-  box-sizing: border-box;
-  align-self: flex-end;
+  margin-left: auto;
+  white-space: nowrap;
+  transition: transform 0.5s ease-out;
+}
+
+/* ================================
+   5) LA BARRE VERTE : .menu__check
+================================ */
+.menu__check {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 59px;
+  height: 100%;
+  background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  /* cachée hors du cadre */
+  transition: transform 0.5s ease-out;
+  z-index: 3;
+  overflow: hidden;
+  /* Le cercle blanc */
+  /* L'icône check */
+}
+.menu__check .menu__check-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu__check .menu__check-icon {
+  color: #99E2D0;
+  font-size: 12px;
+  opacity: 0;
+  /* on fera un fadeIn via keyframes, ou un simple transition */
+}
+
+/* ================================
+   6) CHECKBOX (caché) : déclencheur
+================================ */
+.menu__check-input {
+  display: none;
+}
+
+/* ================================
+   7) AU CLIC (checkbox :checked)
+      => la barre verte glisse,
+         le prix recule,
+         l’icône fadeIn + spin
+================================ */
+.menu__check-input:checked ~ .menu__content .menu__price {
+  transform: translateX(-59px);
+}
+
+.menu__check-input:checked + .menu__check {
+  transform: translateX(0);
+  animation: fadeIn 0.3s forwards;
+  /* Barre verte fade + slide */
+}
+
+/* L'icône check : fadeIn + spin (0.5s) */
+.menu__check-input:checked + .menu__check .menu__check-circle .menu__check-icon {
+  animation: fadeIn 0.3s forwards, spin 0.5s ease-out forwards;
+  opacity: 1;
 }
 
 .order {
