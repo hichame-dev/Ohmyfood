@@ -1,20 +1,90 @@
 @import "../base/variables";
 
+// ===============================
+// ❤️ Animation du cœur au clic
+// ===============================
 
-
-// coeur
-
-/* Animation du cœur au clic */
-.card__checkbox:checked+.card__icon {
-    transform: scale(1.2); // Effet zoom
+.card__checkbox:checked~.card__icon--full {
+    transform: scale(1.2);
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    opacity: 1;
 }
 
-.card__checkbox:not(:checked)+.card__icon {
-    transform: scale(1);
+.card__checkbox:checked~.card__icon--empty {
+    opacity: 0;
 }
 
-/* ✅ Conteneur du loader (plein écran au chargement) */
+.card__checkbox:not(:checked)~.card__icon--full {
+    opacity: 0;
+}
+
+.card__checkbox:not(:checked)~.card__icon--empty {
+    opacity: 1;
+}
+
+// ===============================
+// ✅ Animation pour le menu (check box animation)
+// ===============================
+
+.menu__item {
+    position: relative;
+    overflow: hidden;
+}
+
+.menu__check {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 59px;
+    height: 100%;
+    background-color: #99E2D0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-out;
+    z-index: 3;
+}
+
+.menu__check-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu__check-icon {
+    color: #99E2D0;
+    font-size: 12px;
+    transition: transform 0.5s ease-out;
+}
+
+.menu__check-input {
+    display: none;
+}
+
+.menu__check-input:checked~.menu__content .menu__price {
+    transform: translateX(-59px);
+    transition: transform 0.5s ease-out;
+}
+
+.menu__check-input:checked+.menu__check {
+    transform: translateX(0);
+}
+
+.menu__check-input:checked+.menu__check .menu__check-circle .menu__check-icon {
+    transform: rotate(360deg);
+}
+
+// ===============================
+// ✅ Loader animation
+// ===============================
+
 .loader-container {
     position: fixed;
     top: 0;
@@ -28,23 +98,18 @@
     flex-direction: column;
     z-index: 1000;
     animation: fadeOut 1s ease-out 3s forwards;
-    /* Disparaît après 3s */
 }
 
-/* ✅ Loader animé (cercle tournant) */
 .loader {
     width: 60px;
     height: 60px;
     border: 6px solid transparent;
     border-top: 6px solid #9356DC;
-    /* Violet */
     border-right: 6px solid #FF79DA;
-    /* Rose */
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
 
-/* ✅ Texte animé sous le loader */
 .loader-text {
     margin-top: 15px;
     font-size: 1.5rem;
@@ -53,7 +118,7 @@
     animation: pulse 1.5s ease-in-out infinite;
 }
 
-/* ✅ Animation de rotation */
+// ✅ Animations clés
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -64,7 +129,6 @@
     }
 }
 
-/* ✅ Animation du texte (effet battement) */
 @keyframes pulse {
 
     0%,
@@ -79,7 +143,6 @@
     }
 }
 
-/* ✅ Animation pour faire disparaître le loader après 3s */
 @keyframes fadeOut {
     0% {
         opacity: 1;
